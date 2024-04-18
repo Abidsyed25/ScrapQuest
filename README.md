@@ -26,7 +26,7 @@ Frontend Deployed here :- [quine-scrap-quest.vercel.app/](https://quine-scrap-qu
   </li>
 </ul>
 
-## Setup
+## Setup locally
 
 Follow these steps to set up ScrapQuest locally:
 
