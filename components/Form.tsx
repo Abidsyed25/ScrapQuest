@@ -5,6 +5,7 @@ import Snackbar from "./Snackbar";
 
 
 
+
 export default function Form() {
     const [url, seturl] = useState<string>("");
     const [load,setload] = useState(false);
@@ -21,7 +22,7 @@ export default function Form() {
         }
         
         try {
-            const response = await fetch(process.env.NEXT_APP||"http://localhost:3000", {
+            const response = await fetch(process.env.NEXT_PUBLIC_APP||"http://localhost:3000", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
