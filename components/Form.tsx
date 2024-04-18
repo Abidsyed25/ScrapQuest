@@ -22,7 +22,7 @@ export default function Form() {
         }
         
         try {
-            const response = await fetch(process.env.NEXT_PUBLIC_APP||"http://localhost:3000", {
+            const response = await fetch(process.env.NEXT_PUBLIC_APP||"http://localhost:3000/api", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
