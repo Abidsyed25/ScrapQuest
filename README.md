@@ -4,6 +4,11 @@
 
 ScrapQuest is your go-to solution for effortlessly extracting data from websites. It's a simple yet powerful web scraper built with Next.js, TypeScript, and Puppeteer with Browserless. With ScrapQuest, you can quickly gather valuable information from any website without hassle.
 
+> [!NOTE]  
+> Due to some limitations, website functionality is limited on vercel. So setup project locally for complete functionality
+
+Frontend Deployed here :- [quine-scrap-quest.vercel.app/](https://quine-scrap-quest.vercel.app/)
+
 ## Technologies
 
 <ul>
