@@ -1,4 +1,7 @@
 
+
+
+
   <h1 align="center">ScrapQuest</h1>
 
 
@@ -8,6 +11,12 @@ ScrapQuest is your go-to solution for effortlessly extracting data from websites
 > Due to some limitations, website functionality is limited on vercel. So setup project locally for complete functionality
 
 Frontend Deployed here :- [quine-scrap-quest.vercel.app/](https://quine-scrap-quest.vercel.app/)
+
+- short video for reference
+
+
+https://github.com/Abidsyed25/Quine-ScrapQuest/assets/116893970/7ee87ae2-b691-44de-8cd9-ead09fa985e7
+
 
 ## Technologies
 
