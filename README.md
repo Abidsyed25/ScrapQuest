@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+  <h1 align="center">ScrapQuest</h1>
 
-First, run the development server:
+
+ScrapQuest is your go-to solution for effortlessly extracting data from websites. It's a simple yet powerful web scraper built with Next.js, TypeScript, and Puppeteer with Browserless. With ScrapQuest, you can quickly gather valuable information from any website without hassle.
+
+## Technologies
+
+<ul>
+  <li>
+    <strong>Next.js:</strong> A React framework for building server-side rendered and static web applications.
+  </li>
+  <li>
+    <strong>Puppeteer:</strong> A Node.js library for controlling headless Chrome or Chromium, used here for web scraping.
+  </li>
+  <li>
+    <strong>Browserless:</strong> A service that provides headless browser instances for Puppeteer.
+  </li>
+  <li>
+    <strong>TypeScript:</strong> A statically typed superset of JavaScript that adds type definitions for improved code quality and developer productivity.
+  </li>
+</ul>
+
+## Setup
+
+Follow these steps to set up ScrapQuest locally:
+
+#### Prerequisites
+
+- Node.js (version 18) installed on your machine. You can download it [here](https://nodejs.org/).
+
+### Steps 
+
+<ol>
+  <li>
+    
+```bash
+git clone https://github.com/Abidsyed25/Quine-ScrapQuest.git
+```
+    
+  </li>
+  <li>
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd quine-scrapquest
 ```
+    
+  </li>
+  <li>
+    
+```bash
+npm install
+```
+  </li>
+  <li>
+    
+```bash
+npm run dev
+```
+    
+  </li>
+</ol>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- open localhost:3000 on the browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Open Source Contribution Welcome
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+We welcome contributions from the community to improve ScrapQuest. Whether it's bug fixes, feature enhancements, or documentation improvements, your contributions are valuable.
 
-## Learn More
+#### Open Source Contribution Guidelines
 
-To learn more about Next.js, take a look at the following resources:
+Before contributing, please take a moment to review our [contribution guidelines](CONTRIBUTING.md) to ensure a smooth and collaborative process.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+We appreciate your interest in contributing to ScrapQuest! Let's make it better together.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+****
 
-## Deploy on Vercel
+<h6 align="center">Made with ❤️ by Abid Syed</h6>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
