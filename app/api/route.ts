@@ -15,7 +15,7 @@ export async function POST(request: Request) {
         return NextResponse.json({urlerror:"invalid url"});
     }
 
-    browser = await puppeteer.launch();
+    browser = await puppeteer.connect({ browserWSEndpoint: process.env.API });
     const page = await browser.newPage();
     console.log(url);
     await page.goto(url);
