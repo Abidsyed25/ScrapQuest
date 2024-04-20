@@ -15,7 +15,14 @@ export async function POST(request: Request) {
         return NextResponse.json({urlerror:"invalid url"});
     }
 
-    browser = await puppeteer.connect({ browserWSEndpoint: process.env.API });
+    if (process.env.API) {
+      // If the API URL is present, connect to the existing browser instance
+      console.log("api tested");
+      browser = await puppeteer.connect({ browserWSEndpoint: process.env.API });
+  } else {
+      // If the API URL is not present, launch a new browser instance
+      browser = await puppeteer.launch();
+  }
     const page = await browser.newPage();
     console.log(url);
     await page.goto(url);
