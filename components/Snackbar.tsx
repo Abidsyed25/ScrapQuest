@@ -6,7 +6,7 @@ import { HiCheck, HiExclamation, HiX } from "react-icons/hi";
 export default function Snackbar({state,setstate}:any){
 
   const handleCloseSnackbar = () => {
-    setstate(() => null);
+    setstate(null);
   }
      return <>
          <Toast className="fixed top-14 right-2 md:right-10">
@@ -14,7 +14,7 @@ export default function Snackbar({state,setstate}:any){
           <HiExclamation className="h-5 w-5" />
         </div>
         <div className="ml-3 text-sm font-normal">{state}</div>
-        <Toast.Toggle />
+        <Toast.Toggle onClick={handleCloseSnackbar}/>
       </Toast>
      </>
 } 

@@ -62,6 +62,9 @@ export default function Form() {
         } catch (error: any) {
             console.error("Error:", error.message);
             seterr("Vercel timeout error. Please setup project locally");
+            setTimeout(() => {
+                seterr(null);
+            }, 3000);
             setload(false);
         }
     }
