@@ -60,7 +60,7 @@ representative at an online or offline event.
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported to the community leaders responsible for enforcement at
-sanjay@recodehive.com.
+[Abidsyed25](https://github.com/Abidsyed25)/[ScrapQuest](https://github.com/Abidsyed25/ScrapQuest)
 All complaints will be reviewed and investigated promptly and fairly.
 
 All community leaders are obligated to respect the privacy and security of the
