@@ -50,15 +50,21 @@ Follow these steps to set up ScrapQuest locally:
 <ol>
   <li>
     
+Fork the Repository
+    
+  </li>
+  <li>
+  Clone your Fork from GitHub<br>
+
 ```bash
-git clone https://github.com/Abidsyed25/Quine-ScrapQuest.git
+git clone https://github.com/<your-user-name>/ScrapQuest.git
 ```
     
   </li>
   <li>
 
 ```bash
-cd quine-scrapquest
+cd ScrapQuest
 ```
     
   </li>
@@ -85,7 +91,7 @@ We welcome contributions from the community to improve ScrapQuest. Whether it's 
 
 #### Open Source Contribution Guidelines
 
-Before contributing, please take a moment to review our [contribution guidelines](CONTRIBUTING.md) to ensure a smooth and collaborative process.
+Before contributing, please take a moment to review our [contribution guidelines](CODE_OF_CONDUCT.md) to ensure a smooth and collaborative process.
 
 We appreciate your interest in contributing to ScrapQuest! Let's make it better together.
 
