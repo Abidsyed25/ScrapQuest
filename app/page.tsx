@@ -4,10 +4,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div style={{height:"100vh"}}>
-
-     <Nav/>
-     <Hero/>
+    <div className="bg-gray-950" style={{ height: "100vh" }}>
+      <Nav />
+      <Hero />
     </div>
   );
 }
