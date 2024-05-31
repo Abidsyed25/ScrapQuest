@@ -79,6 +79,7 @@ docker-compose up
 
   </li>
 </ol>
+- open localhost:3000 on the browser
 
 #### Without Docker
 
