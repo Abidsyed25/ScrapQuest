@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  scrapquest:
+    build: .
+    image: scrapquest
+    container_name: scrapquest
+    depends_on:
+      - browserless
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+
+
+  browserless:
+    image: browserless/chrome
+    ports:
+      - "3001:3000"
+    environment:
+      - MAX_CONCURRENT_SESSIONS=10
+      - CONNECTION_TIMEOUT=30000
+      - PREBOOT_CHROME=true 
