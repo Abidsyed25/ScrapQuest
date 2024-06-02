@@ -47,6 +47,42 @@ Follow these steps to set up ScrapQuest locally:
 
 ### Steps 
 
+
+#### Using Docker
+
+<ol>
+  <li>
+    
+Fork the Repository
+    
+  </li>
+  <li>
+  Clone your Fork from GitHub<br>
+
+```bash
+git clone https://github.com/<your-user-name>/ScrapQuest.git
+```
+    
+  </li>
+  <li>
+
+```bash
+cd ScrapQuest
+```
+    
+  </li>
+  <li>
+
+```bash
+docker-compose up
+```
+
+  </li>
+</ol>
+- open localhost:3000 on the browser
+
+#### Without Docker
+
 <ol>
   <li>
     
