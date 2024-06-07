@@ -10,11 +10,13 @@
     "dev:docker": "next dev"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.5.0",
     "flowbite-react": "^0.9.0",
     "next": "14.2.1",
     "puppeteer": "^22.6.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hook-form": "^7.51.5"
   },
   "devDependencies": {
     "@types/node": "^20",
