@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "ScrapQuest",
   description: "Unlock insights from the web with our powerful web scraper",
+  google-site-verification: "3riqoLz1ctin_Cjqew-2mycvrLFtfbq9K9mfYfUx7gk",
 };
 
 export default function RootLayout({
