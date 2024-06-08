@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Snackbar from "./Snackbar";
+import MagicButton from "./ui/Button";
 
 export default function Form() {
   const [url, seturl] = useState<string>("");
@@ -77,13 +78,12 @@ export default function Form() {
           placeholder="https://www.example.com"
         />
 
-        <button
+        <MagicButton
+          title={load ? "Downloading..." : "Download now"}
           onClick={send}
           type="button"
-          className="block text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mx-auto"
-        >
-          {load ? "Downloading..." : "Download now"}
-        </button>
+          disabled={load}
+        />
 
         {err && <Snackbar state={err} setstate={seterr} />}
       </div>
