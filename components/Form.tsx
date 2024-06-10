@@ -66,7 +66,7 @@ export default function Form() {
 
   return (
     <>
-      <div className="mb-6">
+      <div className="mb-6 flex flex-col items-center">
         <label className="block mb-2 text-sm font-medium text-white dark:text-white">
           Type a website url
         </label>
@@ -74,7 +74,7 @@ export default function Form() {
           onChange={update}
           type="text"
           id="success"
-          className="bg-green-50 border border-blue-500 text-blue-900 dark:text-blue-400 placeholder-black-700 dark:placeholder-black-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-blue-500 mb-5"
+          className="md:w-[50rem] w-[20rem] bg-green-50 border border-blue-500 text-blue-900 dark:text-blue-400 placeholder-black-700 dark:placeholder-black-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-blue-500 mb-5"
           placeholder="https://www.example.com"
         />
 

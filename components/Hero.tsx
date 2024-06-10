@@ -16,7 +16,9 @@ export default function Hero() {
         <div className="text-center w-full max-w-3xl">
           {/* Unlock insights from the web with our powerful web scraper */}
           <TypewriterEffectSmoothDemo />
-          <Form />
+        </div>
+        <div className="md:w-[50rem] w-[20rem] flex flex-col items-center">
+        <Form />
         </div>
         </LampContainer>
       </div>
