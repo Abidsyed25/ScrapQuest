@@ -1,4 +1,5 @@
 "use client";
+
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -38,14 +39,14 @@ export default function Contact() {
   return (
     <div className="relative">
       <Nav />
-      <main className="p-20 flex w-full flex-col items-center justify-between">
-        <p style={{ fontSize: "4rem", fontWeight: 800, padding: 20 }}>
-          Scrap<span style={{ backgroundColor: "#a8e4a0", borderRadius: "8px", padding: "0 0.5rem" }}>Quest</span>
+      <main className="p-4 sm:p-20 flex w-full flex-col items-center justify-between">
+        <p className="text-4xl font-extrabold py-5">
+          Scrap<span className="bg-[#a8e4a0] rounded px-2">Quest</span>
         </p>
-        <div className="flex w-full flex-col items-center p-10">
-          <p style={{ paddingTop: '20px', fontSize: '2rem' }}>Facing an Issue? Fill up the form below 👇</p>
-          <div className="flex min-h-screen w-full flex-col items-center justify-between" style={{ paddingTop: '20px', paddingLeft: '25px', paddingRight: '25px', paddingBottom: '25px' }}>
-            <form onSubmit={form.handleSubmit(handleSubmit)} className="max-w-md w-full flex flex-col gap-4">
+        <div className="flex w-full flex-col items-center p-4 sm:p-10">
+          <p className="pt-5 text-xl sm:text-2xl">Facing an Issue? Fill up the form below 👇</p>
+          <div className="flex w-full flex-col items-center justify-between pt-5 px-4 pb-4 sm:px-25 sm:pb-25 min-h-screen">
+            <form onSubmit={form.handleSubmit(handleSubmit)} className="w-full max-w-md flex flex-col gap-4">
               <div className="flex flex-col">
                 <label htmlFor="name" className="font-semibold">Full Name</label>
                 <input
