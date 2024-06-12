@@ -1,18 +1,29 @@
-import { Blockquote } from "flowbite-react";
+"use client";
+
 import Form from "./Form";
 import Snackbar from "./Snackbar";
+import { TypewriterEffectSmoothDemo } from "./HeroText";
+import { LampContainer } from "./ui/LampEffect";
+
+
+
 
 export default function Hero() {
   return (
     <>
-      <div className="h-5/6 flex flex-col justify-center items-center">
-        <div>
-          <Blockquote className=" text-blue-500 text-center my-10">
-            Unlock insights from the web with our powerful web scraper
-          </Blockquote>
-          <Form />
+      <div className="relative h-screen flex flex-col justify-center items-center">
+      <LampContainer>
+        <div className="text-center w-full max-w-3xl">
+          {/* Unlock insights from the web with our powerful web scraper */}
+          <TypewriterEffectSmoothDemo />
         </div>
+        <div className="md:w-[50rem] w-[20rem] flex flex-col items-center">
+        <Form />
+        </div>
+        </LampContainer>
       </div>
+
+     
     </>
   );
 }
