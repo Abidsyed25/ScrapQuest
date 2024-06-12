@@ -87,8 +87,8 @@ export default function Contact() {
                   <p className="text-red-500">{form.formState.errors.issue.message}</p>
                 )}
               </div>
+              <button type="submit" className="p-2 bg-blue-500 text-white rounded hover:bg-blue-800"><b>SUBMIT</b></button>
 
-              <button type="submit" className="p-2 bg-blue-500 text-white rounded"><b>SUBMIT</b></button>
             </form>
             {isSubmitted && (
               <p className="mt-4 text-green-500">Form submitted successfully!</p>
