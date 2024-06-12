@@ -8,6 +8,7 @@ import {
 } from "flowbite-react";
 import Social from "./Social";
 import Contact from "./Contact";
+import About from "./About";
 
 export function Nav() {
   return (
@@ -23,6 +24,7 @@ export function Nav() {
       </NavbarBrand>
       <NavbarToggle />
       <NavbarCollapse>
+        <About></About>
         <Contact />
         <Social />
       </NavbarCollapse>
