@@ -1,5 +1,6 @@
 import React from 'react';
 import { Nav } from "@/components/Nav";
+import Footer from '@/components/Footer';
 const About: React.FC = () => {
   return (
    
@@ -27,7 +28,9 @@ const About: React.FC = () => {
     <p className="mb-6">
       Have questions or need support? Feel free to reach out to our team. We're here to help you get the most out of ScrapQuest.
     </p>
+   
   </div>
+
 </div>
 
   );
