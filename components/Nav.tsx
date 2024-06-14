@@ -8,6 +8,8 @@ import {
 import Social from "./Social";
 import Contact from "./Contact";
 import Login from "./Login";
+import About from "./About";
+
 
 export function Nav() {
   return (
@@ -23,6 +25,7 @@ export function Nav() {
       </NavbarBrand>
       <NavbarToggle />
       <NavbarCollapse>
+        <About />
         <Contact />
         <Login />
         <Social />
