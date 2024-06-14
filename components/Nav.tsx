@@ -3,11 +3,11 @@ import {
   Navbar,
   NavbarBrand,
   NavbarCollapse,
-  NavbarLink,
   NavbarToggle,
 } from "flowbite-react";
 import Social from "./Social";
 import Contact from "./Contact";
+import Login from "./Login";
 
 export function Nav() {
   return (
@@ -24,6 +24,7 @@ export function Nav() {
       <NavbarToggle />
       <NavbarCollapse>
         <Contact />
+        <Login />
         <Social />
       </NavbarCollapse>
     </Navbar>
