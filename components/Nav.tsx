@@ -7,7 +7,9 @@ import {
 } from "flowbite-react";
 import Social from "./Social";
 import Contact from "./Contact";
+import Login from "./Login";
 import About from "./About";
+
 
 export function Nav() {
   return (
@@ -25,6 +27,7 @@ export function Nav() {
       <NavbarCollapse>
         <About />
         <Contact />
+        <Login />
         <Social />
       </NavbarCollapse>
     </Navbar>
