@@ -9,7 +9,7 @@ import Social from "./Social";
 import Contact from "./Contact";
 import Login from "./Login";
 import About from "./About";
-
+import FAQ from "./FAQ";
 
 export function Nav() {
   return (
@@ -28,6 +28,7 @@ export function Nav() {
         <About />
         <Contact />
         <Login />
+        <FAQ />
         <Social />
       </NavbarCollapse>
     </Navbar>
