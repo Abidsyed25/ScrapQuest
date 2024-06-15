@@ -133,7 +133,7 @@ We appreciate your interest in contributing to ScrapQuest! Let's make it better 
 
 ****
 
-<h6 align="center">Made with ❤️ by Abid Syed</h6>
+<h6 align="center">Made with ❤️ by Abid </h6>
 
 
 
