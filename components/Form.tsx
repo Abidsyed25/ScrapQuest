@@ -66,7 +66,7 @@ export default function Form() {
 
   return (
     <>
-      <div className="mb-6 flex flex-col items-center">
+      <div className="mb-6 flex flex-col items-center ">
         <label className="block mb-2 text-sm font-medium text-white dark:text-white">
           Type a website url
         </label>
