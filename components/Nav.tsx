@@ -1,43 +1,55 @@
-import Link from "next/link";
-import { Navbar, NavbarBrand } from "flowbite-react";
+"use client";
+
 import { FaGithub } from "react-icons/fa";
+import { Navbar } from "flowbite-react";
 
 export function Nav() {
   return (
-    <Navbar
-      fluid
-      rounded
-      className="bg-blue-500 shadow-md max-w-screen-2xl m-auto"
-    >
-      <NavbarBrand as={Link} href="/" className="pl-9">
-        <span className="self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
+    <Navbar fluid rounded className="bg-blue-500 shadow-md">
+      <Navbar.Brand href="/">
+        <span className=" whitespace-nowrap text-2xl font-semibold dark:text-white">
           ScrapQuest
         </span>
-      </NavbarBrand>
-      <div className="flex space-x-4 ml-auto mr-10">
-        <Link href="/" className="text-white text-lg hover:underline">
-          Home
-        </Link>
-        <Link href="/about" className="text-white text-lg hover:underline">
-          About Us
-        </Link>
-        <Link href="/contact" className="text-white text-lg hover:underline">
-          Contact
-        </Link>
-        <Link
-          href="https://github.com/Abidsyed25/ScrapQuest"
-          className="flex items-center text-white text-lg hover:underline"
-        >
-          <FaGithub className="mr-2" /> Star on Github
-        </Link>
-        <Link href="/faq" className="text-white text-lg hover:underline">
-          FAQ
-        </Link>
-        <Link href="/login" className="text-white text-lg hover:underline">
-          Begin Your Journey
-        </Link>
-        
+      </Navbar.Brand>
+      <div className="flex md:order-2 ">
+        <Navbar.Toggle className="text-white " />
       </div>
+      <Navbar.Collapse>
+        <Navbar.Link href="/" className="text-white text-lg hover:underline ">
+          Home
+        </Navbar.Link>
+        <Navbar.Link
+          href="/about"
+          className="text-white text-lg hover:underline "
+        >
+          About us
+        </Navbar.Link>
+        <Navbar.Link
+          href="/contact"
+          className="text-white text-lg hover:underline "
+        >
+          contact
+        </Navbar.Link>
+        <Navbar.Link
+          href="https://github.com/Abidsyed25/ScrapQuest"
+          className="text-white text-lg hover:underline flex items-center "
+        >
+          <FaGithub className="mr-2" />
+          <p> Star on Github</p>
+        </Navbar.Link>
+        <Navbar.Link
+          href="/faq"
+          className="text-white text-lg hover:underline "
+        >
+          FAQ
+        </Navbar.Link>
+        <Navbar.Link
+          href="/login"
+          className="text-white text-lg hover:underline "
+        >
+          Begin Your Journey
+        </Navbar.Link>
+      </Navbar.Collapse>
     </Navbar>
   );
 }
