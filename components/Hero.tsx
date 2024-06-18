@@ -3,6 +3,7 @@
 import Form from "./Form";
 import Snackbar from "./Snackbar";
 import { TypewriterEffectSmoothDemo } from "./HeroText";
+import HeroTypingEffect from "./HeroTypingEffect";
 import { LampContainer } from "./ui/LampEffect";
 
 export default function Hero() {
@@ -10,9 +11,10 @@ export default function Hero() {
     <>
       <div className="relative h-screen flex flex-col justify-center items-center">
         <LampContainer>
-          <div className="text-center w-full max-w-3xl">
+          <div className="text-center w-full max-w-xl">
             {/* Unlock insights from the web with our powerful web scraper */}
-            <TypewriterEffectSmoothDemo />
+            {/* <TypewriterEffectSmoothDemo /> */}
+            <HeroTypingEffect />
           </div>
           <div className="md:w-[50rem] w-[20rem] flex flex-col items-center ">
             <Form />

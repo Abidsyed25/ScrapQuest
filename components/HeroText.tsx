@@ -6,54 +6,50 @@ export function TypewriterEffectSmoothDemo() {
   const words = [
     {
       text: "Unlock",
-      className:"text-blue-900 md:text-2xl text-xl italic",
+      className: "text-blue-900 md:text-3xl text-xl italic",
     },
     {
       text: "insights",
-      className:"text-blue-900 md:text-2xl text-xl italic",
+      className: "text-blue-900 md:text-3xl text-xl italic",
     },
     {
       text: "from",
-      className: "text-blue-900 md:text-2xl text-xl  italic",
+      className: "text-blue-900 md:text-3xl text-xl  italic",
     },
     {
       text: "the",
-      className: "text-blue-900 md:text-2xl text-xl italic",
+      className: "text-blue-900 md:text-3xl text-xl italic",
     },
     {
       text: "web",
-      className: "text-blue-900 md:text-2xl text-xl italic",
+      className: "text-blue-900 md:text-3xl text-xl italic",
     },
     {
       text: "with",
-      className: "text-blue-900 md:text-2xl text-xl italic",
+      className: "text-blue-900 md:text-3xl text-xl italic",
     },
     {
       text: "our",
-      className: "text-blue-900 md:text-2xl text-xl italic",
+      className: "text-blue-900 md:text-3xl text-xl italic",
     },
     {
       text: "powerful",
-      className: "text-blue-900 md:text-2xl text-xl italic",
+      className: "text-blue-900 md:text-3xl text-xl italic",
     },
     {
       text: "web",
-      className: "text-teal-400 md:text-2xl text-xl",
+      className: "text-teal-400 md:text-3xl text-xl",
     },
     {
       text: "scraper",
-      className: "text-teal-400  md:text-2xl text-xl",
+      className: "text-teal-400  md:text-3xl text-xl",
     },
-
   ];
   return (
     <div className="max-w-screen-xl mx-auto">
-
-    <div className=" mx-autofont-bold mb-4">
-      <TypewriterEffectSmooth words={words} />
+      <div className=" mx-autofont-bold mb-4">
+        <TypewriterEffectSmooth words={words} />
       </div>
-      </div>
-
-
+    </div>
   );
 }
