@@ -12,7 +12,8 @@ export default function Form() {
     seturl(e.target.value);
   };
 
-  const send = async () => {
+  const send = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setload(true);
     if (err) {
       setload(false);
@@ -66,7 +67,7 @@ export default function Form() {
 
   return (
     <>
-      <div className="mb-6 flex flex-col items-center ">
+      <form className="mb-6 flex flex-col items-center " onSubmit={send}>
         <label className="block mb-2 text-sm font-medium text-white dark:text-white">
           Type a website url
         </label>
@@ -80,13 +81,13 @@ export default function Form() {
 
         <MagicButton
           title={load ? "Downloading..." : "Download now"}
-          onClick={send}
-          type="button"
+          // onClick={send}
+          type="submit"
           disabled={load}
         />
 
         {err && <Snackbar state={err} setstate={seterr} />}
-      </div>
+      </form>
     </>
   );
 }
