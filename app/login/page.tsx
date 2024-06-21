@@ -5,7 +5,8 @@ import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { faEye, faEyeSlash, faHouse } from '@fortawesome/free-solid-svg-icons';
+import { useRouter } from 'next/navigation';
 
 // Define the form schema using zod
 const formSchema = z.object({
@@ -58,6 +59,10 @@ export default function SignInSignUp() {
     if (text !== type) {
       setType(text);
     }
+  };
+  const router = useRouter();
+  const homeClickHandler= ()=>{
+    router.push('/');
   };
 
   const togglePasswordVisibility = () => {
@@ -313,6 +318,11 @@ export default function SignInSignUp() {
       `}</style>
       <div className={containerClass} id="container">
         <div className="form-container sign-up-container">
+          <div className='relative'>
+            <button className='eye-button' onClick={homeClickHandler}>
+              <FontAwesomeIcon icon={faHouse} className='h-5 w-5'></FontAwesomeIcon>
+            </button>
+          </div>
           <form onSubmit={signUpForm.handleSubmit(handleSignUpSubmit)}>
             <h1>Create Account</h1>
             <div className="social-container">
@@ -342,6 +352,11 @@ export default function SignInSignUp() {
           </form>
         </div>
         <div className="form-container sign-in-container">
+          <div className='relative'>
+            <button className='eye-button' onClick={homeClickHandler}>
+              <FontAwesomeIcon icon={faHouse} className='h-5 w-5'></FontAwesomeIcon>
+            </button>
+          </div>
           <form onSubmit={signInForm.handleSubmit(handleSignInSubmit)} >
             <h1>Access your Account</h1>
             <div className="social-container">
