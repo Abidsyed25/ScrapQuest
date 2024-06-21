@@ -28,7 +28,7 @@ export function Nav() {
           href="/contact"
           className="text-white text-lg hover:underline "
         >
-          contact
+          Contact
         </Navbar.Link>
         <Navbar.Link
           href="https://github.com/Abidsyed25/ScrapQuest"
