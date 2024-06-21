@@ -10,9 +10,9 @@ import React, { useState } from "react";
 const formSchema = z.object({
   name: z.string().nonempty("Name is required"),
   email: z.string().email("Invalid email address"),
-  issue: z.string().max(500, {
-    message: "Describe your issue within 500 characters.",
-  }),
+  feedbackType: z.string().nonempty("Please select a feedback type"),
+  issue: z.string().optional(),
+  otherFeedback: z.string().optional(),
 });
 
 // Contact form component
@@ -23,8 +23,10 @@ export default function Contact() {
     defaultValues: {
       name: "",
       email: "",
-      issue: ""
-    }
+      feedbackType: "",
+      issue: "",
+      otherFeedback: "",
+    },
   });
 
   // Handle form submission
@@ -34,6 +36,27 @@ export default function Contact() {
     setIsSubmitted(true);
     form.reset();
     setTimeout(() => setIsSubmitted(false), 3000); // Hide notification after 3 seconds
+  };
+
+  // Function to show other feedback input when "Other" is selected
+  const renderOtherFeedbackInput = () => {
+    if (form.watch("feedbackType") === "other") {
+      return (
+        <div className="flex flex-col">
+          <label htmlFor="otherFeedback" className="font-semibold">Other Feedback</label>
+          <textarea
+            id="otherFeedback"
+            placeholder="Enter your feedback here"
+            {...form.register("otherFeedback")}
+            className="p-2 border rounded resize-none text-black"
+          />
+          {form.formState.errors.otherFeedback && (
+            <p className="text-red-500">{form.formState.errors.otherFeedback.message}</p>
+          )}
+        </div>
+      );
+    }
+    return null;
   };
 
   return (
@@ -76,10 +99,30 @@ export default function Contact() {
               </div>
 
               <div className="flex flex-col">
+                <label htmlFor="feedbackType" className="font-semibold">Type of Feedback</label>
+                <select
+                  id="feedbackType"
+                  {...form.register("feedbackType")}
+                  className="p-2 border rounded text-black"
+                >
+                  <option value="">Select...</option>
+                  <option value="question">Question</option>
+                  <option value="suggestion">Suggestion</option>
+                  <option value="issue">Issue</option>
+                  <option value="other">Other</option>
+                </select>
+                {form.formState.errors.feedbackType && (
+                  <p className="text-red-500">{form.formState.errors.feedbackType.message}</p>
+                )}
+              </div>
+
+              {renderOtherFeedbackInput()}
+
+              <div className="flex flex-col">
                 <label htmlFor="issue" className="font-semibold">Issue</label>
                 <textarea
                   id="issue"
-                  placeholder="Tell us a little bit about your issue in details here"
+                  placeholder="Tell us a little bit about your issue in detail here"
                   className="p-2 border rounded resize-none text-black"
                   {...form.register("issue")}
                 />
