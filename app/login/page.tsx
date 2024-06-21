@@ -8,7 +8,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 // Define the form schema using zod
-const formSchema = z.object({
+// const formSchema = z.object({
+//   name: z.string().nonempty("*Name is required"),
+//   email: z.string().email("*Invalid email address"),
+//   password: z.string().min(6, "*Password should be at least 6 characters"),
+// });
+const signInSchema = z.object({
+  email: z.string().email("*Invalid email address"),
+  password: z.string().min(6, "*Password should be at least 6 characters"),
+});
+
+const signUpSchema = z.object({
   name: z.string().nonempty("*Name is required"),
   email: z.string().email("*Invalid email address"),
   password: z.string().min(6, "*Password should be at least 6 characters"),
@@ -20,16 +30,16 @@ export default function SignInSignUp() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  const signInForm = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const signInForm = useForm<z.infer<typeof signInSchema>>({
+    resolver: zodResolver(signInSchema),
     defaultValues: {
       email: "",
       password: ""
     }
   });
 
-  const signUpForm = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const signUpForm = useForm<z.infer<typeof signUpSchema>>({
+    resolver: zodResolver(signUpSchema),
     defaultValues: {
       name: "",
       email: "",
@@ -37,7 +47,7 @@ export default function SignInSignUp() {
     }
   });
 
-  const handleSignInSubmit = async (values: z.infer<typeof formSchema>) => {
+  const handleSignInSubmit = async (values: z.infer<typeof signInSchema>) => {
     console.log("Sign In:", values);
     try {
       const res = await fetch("/api/login", {
@@ -61,7 +71,7 @@ export default function SignInSignUp() {
     }
   };
 
-  const handleSignUpSubmit = async (values: z.infer<typeof formSchema>) => {
+  const handleSignUpSubmit = async (values: z.infer<typeof signUpSchema>) => {
     console.log("Sign Up:", values);
     try {
       const res = await fetch("/api/register", {
