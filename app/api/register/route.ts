@@ -1,4 +1,4 @@
-// pages/api/register.js
+
 import dbConnect from '../../../utils/dbConnect';
 import User from '../../../models/auth';
 import bcrypt from "bcryptjs"; 
