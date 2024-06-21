@@ -1,7 +1,7 @@
 // pages/api/register.js
 import dbConnect from '../../../utils/dbConnect';
 import User from '../../../models/auth';
-import bcrypt from 'bcryptjs';
+import bcrypt from "bcryptjs"; 
 import { NextResponse } from "next/server";
 export const POST = async (request: any) => {
   try {
