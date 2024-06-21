@@ -1,9 +1,11 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 // Define the form schema using zod
 const formSchema = z.object({
@@ -16,6 +18,7 @@ const formSchema = z.object({
 export default function SignInSignUp() {
   const [type, setType] = useState('signIn');
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const signInForm = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -57,6 +60,10 @@ export default function SignInSignUp() {
     }
   };
 
+  const togglePasswordVisibility = () => {
+    setIsVisible(!isVisible);
+  };
+  
   const containerClass = `container ${type === 'signUp' ? 'right-panel-active' : ''}`;
 
   return (
@@ -180,6 +187,16 @@ export default function SignInSignUp() {
           height: 100%;
           transition: all 0.6s ease-in-out;
           border: solid 2px darkturquoise;
+        }
+
+        .eye-button {
+          position: absolute;
+          right: -19px;
+          top: 9px;
+          background: none;
+          border: none;
+          cursor: pointer;
+          color: darkturquoise;
         }
 
         .sign-in-container {
@@ -341,7 +358,12 @@ export default function SignInSignUp() {
             {signUpForm.formState.errors.email && (
               <p className="text-darkturquoise">{signUpForm.formState.errors.email?.message}</p>
             )}
-            <input type="password" placeholder="Password" {...signUpForm.register("password")} />
+            <div style={{ position: 'relative', width: '100%' }}>
+              <input type={isVisible ? "text" : "password"} placeholder="Password" {...signUpForm.register("password")} />
+              <button type="button" className="eye-button" onClick={togglePasswordVisibility}>
+                <FontAwesomeIcon icon={isVisible ? faEyeSlash : faEye} />
+              </button>
+            </div>
             {signUpForm.formState.errors.password && (
               <p className="text-darkturquoise">{signUpForm.formState.errors.password?.message}</p>
             )}
@@ -371,7 +393,12 @@ export default function SignInSignUp() {
             {signInForm.formState.errors.email && (
               <p className="text-darkturquoise">{signInForm.formState.errors.email?.message}</p>
             )}
-            <input type="password" placeholder="Password" {...signInForm.register("password")} />
+            <div style={{ position: 'relative', width: '100%' }}>
+              <input type={isVisible ? "text" : "password"} placeholder="Password" {...signInForm.register("password")} />
+              <button type="button" className="eye-button" onClick={togglePasswordVisibility}>
+                <FontAwesomeIcon icon={isVisible ? faEyeSlash : faEye} />
+              </button>
+            </div>
             {signInForm.formState.errors.password && (
               <p className="text-darkturquoise">{signInForm.formState.errors.password?.message}</p>
             )}

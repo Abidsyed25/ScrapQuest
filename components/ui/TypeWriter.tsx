@@ -47,27 +47,27 @@ export const TypewriterEffect = ({
   const renderWords = () => {
     return (
       <div className="max-w-full sm:max-w-md">
-      <motion.div ref={scope} className="inline">
-        {wordsArray.map((word, idx) => {
-          return (
-            <div key={`word-${idx}`} className="inline-block">
-              {word.text.map((char, index) => (
-                <motion.span
-                  initial={{}}
-                  key={`char-${index}`}
-                  className={cn(
-                    `dark:text-white text-black opacity-0 hidden`,
-                    word.className
-                  )}
-                >
-                  {char}
-                </motion.span>
-              ))}
-              &nbsp;
-            </div>
-          );
-        })}
-      </motion.div>
+        <motion.div ref={scope} className="inline">
+          {wordsArray.map((word, idx) => {
+            return (
+              <div key={`word-${idx}`} className="inline-block">
+                {word.text.map((char, index) => (
+                  <motion.span
+                    initial={{}}
+                    key={`char-${index}`}
+                    className={cn(
+                      `dark:text-white text-black opacity-0 hidden`,
+                      word.className
+                    )}
+                  >
+                    {char}
+                  </motion.span>
+                ))}
+                &nbsp;
+              </div>
+            );
+          })}
+        </motion.div>
       </div>
     );
   };
@@ -121,10 +121,10 @@ export const TypewriterEffectSmooth = ({
   });
   const renderWords = () => {
     return (
-      <div>
+      <div className="px-6 flex ">
         {wordsArray.map((word, idx) => {
           return (
-            <div key={`word-${idx}`} className="inline-block">
+            <div key={`word-${idx}`} className=" inline-block">
               {word.text.map((char, index) => (
                 <span
                   key={`char-${index}`}
