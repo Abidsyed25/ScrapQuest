@@ -6,32 +6,27 @@ import { InfiniteMovingCards } from "../components/ui/InfiniteMovingCards";
 const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+      "ScrapQuest has revolutionized the way we handle data extraction. The platform is incredibly user-friendly and saves us hours of manual scraping. We can now focus on analyzing the data instead of collecting it. Highly recommended for anyone in need of efficient web scraping solutions!",
+    name: "John D",
+    title: "Data Analyst",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+      "Running a small business means wearing many hats, and ScrapQuest has taken a significant load off my shoulders. The intuitive interface and powerful scraping capabilities allow me to gather market insights effortlessly. It’s like having an extra team member dedicated to data collection!",
+    name: "Emily R",
+    title: " Research Scientist",
   },
   {
     quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+      "Integrating web data into our applications used to be a daunting task, but ScrapQuest made it incredibly simple. The platform’s robust API and straightforward documentation helped us get up and running in no time. It’s an indispensable tool for any developer working with web data.",
+    name: "Sophia L.",
+    title: "Software Developer",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+      "ScrapQuest is the best web scraping tool I’ve ever used. It’s efficient, reliable, and the customer support is top-notch. We can now collect data from multiple sources quickly and accurately, which has significantly improved our market analysis process. I can’t imagine going back to our old methods!",
+    name: "David M",
+    title: "Market Researcher",
   },
 ];
 
