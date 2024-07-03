@@ -4,6 +4,7 @@ import Form from "./Form";
 import Snackbar from "./Snackbar";
 import { TypewriterEffectSmoothDemo } from "./HeroText";
 import HeroTypingEffect from "./HeroTypingEffect";
+import Testimonials from "./Testimonials";
 import { LampContainer } from "./ui/LampEffect";
 
 export default function Hero() {
@@ -21,6 +22,7 @@ export default function Hero() {
           </div>
         </LampContainer>
       </div>
+      <Testimonials/>
     </>
   );
 }
