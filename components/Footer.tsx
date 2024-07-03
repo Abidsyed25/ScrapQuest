@@ -55,7 +55,7 @@ export default function Footer() {
           </p>
           <div className="social-media flex justify-center mt-2">
             <a href="https://www.facebook.com" className="social-icon mx-2 hover:text-blue-400">
-              <FaFacebookF className="w-5 h-5" />
+              <FaFacebookF className="w-5 h-5"/>
             </a>
             <a href="https://www.twitter.com" className="social-icon mx-2 hover:text-blue-400">
               <FaTwitter className="w-5 h-5" />
