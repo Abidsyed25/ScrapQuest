@@ -15,7 +15,7 @@ const TermsAndConditions = () => {
             <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
             <p className="text-gray-700">
               Welcome to ScrapQuest! These Terms and Conditions outline the
-              rules and regulations for the use of ScrapQuest's website and
+              rules and regulations for the use of ScrapQuest website and
               services. By accessing and using our website, you accept and agree
               to comply with these terms. If you do not agree with any part of
               these terms, you should not use our website or services.
@@ -26,15 +26,16 @@ const TermsAndConditions = () => {
             <h2 className="text-2xl font-semibold mb-4">Definitions</h2>
             <ul className="list-disc list-inside text-gray-700">
               <li>
-                <strong>"Service"</strong> refers to the web scraping services
-                provided by ScrapQuest.
+                <strong>&quot;Service&quot;</strong> refers to the web scraping
+                services provided by ScrapQuest.
               </li>
               <li>
-                <strong>"We," "Us," "Our"</strong> refers to ScrapQuest.
+                <strong>&quot;We,&quot; &quot;Us,&quot; &quot;Our&quot;</strong>{" "}
+                refers to ScrapQuest.
               </li>
               <li>
-                <strong>"You," "Your"</strong> refers to the user or customer of
-                our website and services.
+                <strong>&quot;You,&quot; &quot;Your&quot;</strong> refers to the
+                user or customer of our website and services.
               </li>
             </ul>
           </section>
@@ -137,9 +138,9 @@ const TermsAndConditions = () => {
             <p className="text-gray-700">
               You agree to indemnify and hold harmless ScrapQuest, its
               affiliates, officers, agents, and employees, from any claim or
-              demand, including reasonable attorneys' fees, made by any third
-              party due to or arising out of your use of our services, your
-              violation of these terms, or your violation of any rights of
+              demand, including reasonable attorneys&quot; fees, made by any
+              third party due to or arising out of your use of our services,
+              your violation of these terms, or your violation of any rights of
               another.
             </p>
           </section>
