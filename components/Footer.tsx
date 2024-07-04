@@ -1,7 +1,19 @@
-import React from 'react';
-import Link from 'next/link';
-import { FaHome, FaInfoCircle, FaEnvelope, FaGithub, FaQuestionCircle, FaSignInAlt, FaFacebookF, FaTwitter, FaGoogle, FaLinkedinIn } from 'react-icons/fa';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import React from "react";
+import Link from "next/link";
+import {
+  FaHome,
+  FaInfoCircle,
+  FaEnvelope,
+  FaGithub,
+  FaQuestionCircle,
+  FaSignInAlt,
+  FaFacebookF,
+  FaTwitter,
+  FaGoogle,
+  FaLinkedinIn,
+  FaPenSquare,
+} from "react-icons/fa";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export default function Footer() {
   return (
@@ -42,6 +54,12 @@ export default function Footer() {
               FAQ
             </a>
           </Link>
+          <Link href="/termsconditions" legacyBehavior>
+            <a className="hover:text-blue-400 flex items-center">
+              <FaPenSquare className="w-4 h-4 mr-2" />
+              Terms & Conditions
+            </a>
+          </Link>
           <Link href="/login" legacyBehavior>
             <a className="hover:text-blue-400 flex items-center">
               <FaSignInAlt className="w-4 h-4 mr-2" />
@@ -50,25 +68,39 @@ export default function Footer() {
           </Link>
         </div>
         <div className="mt-4">
-          <p className="social-text" style={{ color: 'turquoise' }}>
+          <p className="social-text" style={{ color: "turquoise" }}>
             Discover more about ScrapQuest and stay updated!
           </p>
           <div className="social-media flex justify-center mt-2">
-            <a href="https://www.facebook.com" className="social-icon mx-2 hover:text-blue-400">
+            <a
+              href="https://www.facebook.com"
+              className="social-icon mx-2 hover:text-blue-400"
+            >
               <FaFacebookF className="w-5 h-5" />
             </a>
-            <a href="https://www.twitter.com" className="social-icon mx-2 hover:text-blue-400">
+            <a
+              href="https://www.twitter.com"
+              className="social-icon mx-2 hover:text-blue-400"
+            >
               <FaTwitter className="w-5 h-5" />
             </a>
-            <a href="https://www.gmail.com" className="social-icon mx-2 hover:text-blue-400">
+            <a
+              href="https://www.gmail.com"
+              className="social-icon mx-2 hover:text-blue-400"
+            >
               <FaGoogle className="w-5 h-5" />
             </a>
-            <a href="https://www.linkedin.com" className="social-icon mx-2 hover:text-blue-400">
+            <a
+              href="https://www.linkedin.com"
+              className="social-icon mx-2 hover:text-blue-400"
+            >
               <FaLinkedinIn className="w-5 h-5" />
             </a>
           </div>
         </div>
-        <h1 className="mt-4">Copyright © 2024, ScrapQuest. All Rights Reserved.</h1>
+        <h1 className="mt-4">
+          Copyright © 2024, ScrapQuest. All Rights Reserved.
+        </h1>
       </div>
     </div>
   );
