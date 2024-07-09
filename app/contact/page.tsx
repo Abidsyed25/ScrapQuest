@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Nav } from "@/components/Nav";
 import React, { useState } from "react";
+import Footer from "@/components/Footer";
 
 // Define the form schema using zod
 const formSchema = z.object({
@@ -139,6 +140,7 @@ export default function Contact() {
           </div>
         </div>
       </main>
+      <Footer/>
     </div>
   );
 }

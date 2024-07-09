@@ -33,10 +33,8 @@ const About: React.FC = () => {
           <p>Email: <a href="mailto:support@scrapquest.com" className="text-blue-600">support@scrapquest.com</a></p>
           <p>Phone: <a href="tel:+123456789" className="text-blue-600">+1 234 567 89</a></p>
         </div>
-
-        
-        
       </div>
+        <Footer/>
     </div>
   );
 }

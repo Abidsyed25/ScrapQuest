@@ -7,6 +7,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import faqs from "../faq/faqs";
+import Footer from '@/components/Footer';
 
 const FAQ: React.FC = () => {
   return (
@@ -32,6 +33,7 @@ const FAQ: React.FC = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
