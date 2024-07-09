@@ -6,13 +6,27 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import faqs from "../faq/faqs";
+import faqs from "./faqs"; // Adjust the path to faqs.js as per your project structure
+import Link from "next/link";
+import Image from "next/image";
+import homeIcon from './homeicon.png'; // Adjust the path to homeicon.png as per your project structure
 
 const FAQ: React.FC = () => {
+  const homeIconStyle = {
+    position: 'absolute',
+    top: '4rem', // Adjust as needed for positioning
+    left: '1rem', // Adjust as needed for positioning
+    width: '2.5rem',
+    cursor: 'pointer'
+  };
+
   return (
     <>
       <div className="relative bg-black">
         <Nav />
+        <Link href="/" passHref>
+          <Image src={homeIcon} alt="Home" style={homeIconStyle} width={50} height={50} />
+        </Link>
         <div className="container mx-auto p-6 max-w-[48rem]">
           <h1 className="text-4xl font-bold mb-6 text-center">
             Frequently Asked{" "}
