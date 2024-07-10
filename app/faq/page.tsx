@@ -11,8 +11,9 @@ import Link from "next/link";
 import Image from "next/image";
 import homeIcon from './homeicon.png'; // Adjust the path to homeicon.png as per your project structure
 import Footer from '@/components/Footer';
+
 const FAQ: React.FC = () => {
-  const homeIconStyle = {
+  const homeIconStyle: React.CSSProperties = {
     position: 'absolute',
     top: '4rem', // Adjust as needed for positioning
     left: '1rem', // Adjust as needed for positioning

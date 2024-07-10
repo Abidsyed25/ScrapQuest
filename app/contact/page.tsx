@@ -8,6 +8,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import homeIcon from './homeicon.png'; // Ensure this path is correct
+import Footer from '@/components/Footer';
 
 // Define the form schema using zod
 const formSchema = z.object({
