@@ -1,7 +1,4 @@
-
-
-
-
+<a id="top"></a>
   <h1 align="center">ScrapQuest</h1>
 
 
@@ -121,15 +118,65 @@ npm run dev
 
 - open localhost:3000 on the browser
 
-### Open Source Contribution Welcome
+## ✍️ Open Source Contribution Welcome:
 
 We welcome contributions from the community to improve ScrapQuest. Whether it's bug fixes, feature enhancements, or documentation improvements, your contributions are valuable.
+<hr>
 
-#### Open Source Contribution Guidelines
 
-Before contributing, please take a moment to review our [contribution guidelines](CODE_OF_CONDUCT.md) to ensure a smooth and collaborative process.
+<!-- Code of conduct -->
+<div>
+<h2><img src = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="35" height="35"> Code of Conduct:</h2>
+</div>
 
-We appreciate your interest in contributing to ScrapQuest! Let's make it better together.
+Please note that this project is released with a [Contributor Code of Conduct](./CODE_OF_CONDUCT.md). By participating in this project you agree to abide by its terms. And we appreciate your interest in contributing to ScrapQuest! Let's make it better together.
+<hr>
+
+
+
+
+<!------------------------------------------------------------------------FEATURED IN------------------------------------------------------------------------------>
+
+## :zap: Featured In:
+
+
+ <div>
+    <h2><img src="https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/blob/master/Emojis/Hand%20gestures/Flexed%20Biceps.png?raw=true" width="35" height="35" > Open Source Programs</h2>
+  </div>
+<table>
+   <tr>
+      <th>Event Logo</th>
+      <th>Event Name</th>
+      <th>Event Description</th>
+   </tr>
+   <tr>
+      <td><img src="https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png" width="200" height="auto" loading="lazy" alt="GSSoC 24"/></td>
+      <td>GirlScript Summer of Code 2024</td>
+      <td>GirlScript Summer of Code is a three-month-long Open Source Program conducted every summer by GirlScript Foundation. It is an initiative to bring more beginners to Open-Source Software Development.</td>
+   </tr>
+</table>
+<hr>
+
+<!-- License -->
+<div>
+<h2><img src = "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Page%20with%20Curl.png" width="35" height="35"> License:</h2>
+</div>
+
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)<br>
+This project is licensed under the [MIT License](./LICENSE).
+
+<hr>
+
+
+<div>
+  <h2><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f64f_1f3fb/512.webp" width="35" height="35"> Support </h2>
+</div>
+
+<div>
+  Don't forget to leave a star<img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f31f/512.webp" width="35" height="30"> for this project!
+</div> <br>
+
+<a href="#top" style="position: fixed; bottom: 20px; right: 20px; background-color: black ; color: white; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; border-radius: 5px; font-family: Arial; font-size: 16px;">Go to Top</a>
 
 ****
 
