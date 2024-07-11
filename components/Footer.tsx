@@ -63,6 +63,12 @@ export default function Footer() {
                 Terms & Conditions
               </a>
             </Link>
+            <Link href="/privacypolicy" legacyBehavior>
+              <a className="hover:text-blue-400 flex items-center">
+                <FaPenSquare className="w-4 h-4 mr-1" />
+                Privacy Policy
+              </a>
+            </Link>
             <Link href="/login" legacyBehavior>
                 <a className="hover:text-blue-400 flex items-center">
                   <FaSignInAlt className="w-4 h-4 mr-2" />
