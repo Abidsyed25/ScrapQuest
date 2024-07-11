@@ -1,12 +1,26 @@
 import React from 'react';
 import { Nav } from "@/components/Nav";
 import Footer from '@/components/Footer';
+import Link from "next/link";
+import Image from "next/image";
+import homeIcon from './homeicon.png'; // Ensure this path is correct
 
 const About: React.FC = () => {
+  const homeIconStyle: React.CSSProperties = {
+    position: 'absolute',
+    top: 'rem', // Adjust as needed for positioning
+    left: '1rem', // Adjust as needed for positioning
+    width: '2.5rem',
+    cursor: 'pointer'
+  };
+
   return (
     <div className="relative">
       <Nav />
-      <div className="container mx-auto p-6 max-w-[48rem]"> {/* Added max-w-lg for reducing the box size */}
+      <div className="container mx-auto p-6 max-w-[48rem]">
+        <Link href="/" passHref>
+          <Image src={homeIcon} alt="Home" style={homeIconStyle} width={50} height={50} />
+        </Link>
         <h1 className="text-4xl font-bold mb-6 text-center">About <span className="bg-[#8abf83] rounded px-2">Us</span></h1>
 
         <h2 className="text-2xl text-center font-semibold mb-4">Welcome to ScrapQuest!</h2>
