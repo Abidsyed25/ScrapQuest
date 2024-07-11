@@ -35,11 +35,10 @@ export function Nav() {
           <FaQuestionCircle className="mr-2" />
           FAQ
         </Navbar.Link>
-        <Navbar.Link href="/termsconditions" className="text-white text-lg hover:underline flex items-center">
-        <FaPenSquare className="w-4 h-4 mr-2" />
-        Terms & Conditions
+        <Navbar.Link href="/termsconditions" className="text-white text-lg md:text-sm flex items-center transform hover:scale-110 transition-transform duration-200 hover:text-white">
+          <FaPenSquare className="mr-2" />
+          Terms & Conditions
         </Navbar.Link>
-
         <Navbar.Link href="/login" className="text-white text-lg md:text-sm hover:underline flex items-center">
           <FaSignInAlt className="mr-2" />
           Begin Your Journey

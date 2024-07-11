@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-     <html lang="en">
+    <html lang="en">
       <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXWGCQ3R0"></script>
         <script
@@ -32,8 +32,8 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}
-      <header>
+      <body className={inter.className}>
+        <header>
           <div className="header-content">
             <GoogleTranslate />
           </div>

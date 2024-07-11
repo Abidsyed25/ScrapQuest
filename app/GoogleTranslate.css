@@ -1,6 +1,7 @@
 .google-translate-container {
-margin-left: 1550px;
-z-index: 1000;
-transform: scale(0.8);
-}
-
+    position: absolute;
+    top: -80px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it is above other elements */
+  }
+  
