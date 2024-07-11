@@ -39,6 +39,7 @@ const HeroTypingEffect = () => {
         />
       </div>
     </div>
+    
   );
 };
 
