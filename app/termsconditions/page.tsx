@@ -1,14 +1,32 @@
 import { Nav } from "@/components/Nav";
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import homeIcon from './homeicon.png'; // Ensure this path is correct
 import Footer from "@/components/Footer";
 const TermsAndConditions = () => {
+  const homeIconStyle: React.CSSProperties = {
+    position: 'absolute',
+    top: '0.1rem',
+    left: '-28rem',
+    width: '2.5rem',
+    cursor: 'pointer'
+  };
+
   return (
     <div className="relative">
       <Nav />
       <div className="container mx-auto p-6 max-w-[48rem]">
+        <div style={{ position: 'relative' }}>
+          <Link href="/" legacyBehavior>
+            <a>
+              <Image src={homeIcon} alt="Home" style={homeIconStyle} width={50} height={50} />
+            </a>
+          </Link>
+        </div>
+
         <h1 className="text-4xl font-bold mb-6 text-center">
-          Terms and{" "}
-          <span className="bg-[#8abf83] rounded px-2">Conditions</span>
+          Terms and <span className="bg-[#8abf83] rounded px-2">Conditions</span>
         </h1>
 
         <section className="mb-6">

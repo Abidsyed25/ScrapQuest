@@ -4,8 +4,11 @@ import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Nav } from "@/components/Nav";
-import React, { useState } from "react";
-import Footer from "@/components/Footer";
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import homeIcon from './homeicon.png'; // Ensure this path is correct
+import Footer from '@/components/Footer';
 
 // Define the form schema using zod
 const formSchema = z.object({
@@ -29,6 +32,19 @@ export default function Contact() {
       otherFeedback: "",
     },
   });
+
+  // Disable scrolling on mount
+  useEffect(() => {
+    const disableScroll = () => {
+      document.body.style.overflow = 'hidden';
+    };
+    disableScroll();
+
+    // Re-enable scrolling when component unmounts
+    return () => {
+      document.body.style.overflow = 'visible';
+    };
+  }, []);
 
   // Handle form submission
   const handleSubmit = (values: z.infer<typeof formSchema>) => {
@@ -60,10 +76,21 @@ export default function Contact() {
     return null;
   };
 
+  const homeIconStyle: React.CSSProperties = {
+    position: 'absolute',
+    top: '4rem', // Adjust as needed for positioning
+    left: '1rem', // Adjust as needed for positioning
+    width: '2.5rem',
+    cursor: 'pointer'
+  };
+
   return (
     <div className="relative">
       <Nav />
       <main className="p-4 sm:p-20 flex w-full flex-col items-center justify-between">
+        <Link href="/" passHref>
+          <Image src={homeIcon} alt="Home" style={homeIconStyle} width={50} height={50} />
+        </Link>
         <p className="text-4xl font-extrabold py-5">
           Scrap<span className="bg-[#a8e4a0] rounded px-2">Quest</span>
         </p>
