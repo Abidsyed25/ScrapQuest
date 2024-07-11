@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
      <html lang="en">
-      <Head>
+      <head>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-8QXWGCQ3R0"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -29,7 +29,7 @@ export default function RootLayout({
             `,
           }}
         />
-      </Head>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
