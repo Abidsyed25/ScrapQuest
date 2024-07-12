@@ -67,24 +67,23 @@ export default function Form() {
 
   return (
     <>
-      <form className="mb-6 flex flex-col items-center " onSubmit={send}>
-        <label className="block mb-2 text-sm font-medium text-white dark:text-white">
+      <form className="mb-6 flex flex-col items-center" onSubmit={send}>
+        <label className="block mb-2 text-sm font-medium text-white dark:text-white max-md:text-xs">
           Type a website url
         </label>
         <input
           onChange={update}
           type="text"
           id="success"
-          className="md:w-[50rem] w-[20rem] bg-green-50 border border-blue-500 text-blue-900 dark:text-blue-400 placeholder-black-700 dark:placeholder-black-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-blue-500 mb-5"
+          className="lg:w-[50rem] w-[20rem] bg-green-50 border border-blue-500 text-blue-900 dark:text-blue-400 placeholder-black-700 dark:placeholder-black-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-blue-500 mb-5 max-lg:text-sm max-md:text-xs max-sm:p-2 max-sm:w-[85%]"
           placeholder="https://www.example.com"
         />
 
-        <MagicButton
-          title={load ? "Downloading..." : "Download now"}
-          // onClick={send}
-          type="submit"
-          disabled={load}
-        />
+          <MagicButton
+            title={load ? "Downloading..." : "Download now"}
+            type="submit"
+            disabled={load}
+          />
 
         {err && <Snackbar state={err} setstate={seterr} />}
       </form>
