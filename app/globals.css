@@ -24,7 +24,21 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    margin: 0;
+    padding: 0;
 }
+
+.header-content {
+  position: relative;
+  height: 0px; /* Adjust as necessary */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #007bff; /* Adjust the color if needed */
+  padding: 0 20px; /* Adjust the padding if needed */
+}
+
+
 
 @layer utilities {
   .text-balance {

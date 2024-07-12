@@ -1,6 +1,6 @@
 "use client";
 
-import { FaHome, FaInfoCircle, FaEnvelope, FaGithub, FaQuestionCircle, FaSignInAlt, FaPenSquare } from "react-icons/fa";
+import { FaHome, FaInfoCircle, FaEnvelope, FaGithub, FaQuestionCircle, FaSignInAlt,  FaPenSquare } from "react-icons/fa";
 import { Navbar } from "flowbite-react";
 
 export function Nav() {
@@ -35,11 +35,11 @@ export function Nav() {
           <FaQuestionCircle className="mr-2" />
           FAQ
         </Navbar.Link>
-        <Navbar.Link href="/termsconditions" className="text-white text-sm flex items-center transform hover:scale-110 transition-transform duration-200 hover:text-white">
-          <FaPenSquare className="w-4 h-4 mr-2" />
+        <Navbar.Link href="/termsconditions" className="text-white text-lg md:text-sm flex items-center transform hover:scale-110 transition-transform duration-200 hover:text-white">
+          <FaPenSquare className="mr-2" />
           Terms & Conditions
         </Navbar.Link>
-        <Navbar.Link href="/login" className="text-white text-lg md:text-sm flex items-center transform hover:scale-110 transition-transform duration-200 hover:text-white">
+        <Navbar.Link href="/login" className="text-white text-lg md:text-sm hover:underline flex items-center">
           <FaSignInAlt className="mr-2" />
           Begin Your Journey
         </Navbar.Link>

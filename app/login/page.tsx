@@ -151,7 +151,12 @@ export default function SignInSignUp() {
           background-color: transparent;
           border-color: darkturquoise;
         }
-
+        .google-translate-container {
+          position: absolute;
+          top: -80px; /* Adjust as needed */
+          right: 10px; /* Adjust as needed */
+          z-index: 1000; /* Ensure it is above other elements */
+        }
         form {
           background-color: #ffffff;
           display: flex;
