@@ -2,9 +2,12 @@
   <h1 align="center">ScrapQuest</h1>
   
   <h3 align="center">
+  
     
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Roboto&size=18&duration=4995&pause=1000&color=F7F7F7&random=false&width=431&height=58&lines=Solution+for+effortlessly+extracting+data+from+websites)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=000000&random=false&width=660&lines=Solution+for+extracting+data+from+websites+effortlessly)](https://git.io/typing-svg)
 </h3>
+
+
 <hr>
   
 
