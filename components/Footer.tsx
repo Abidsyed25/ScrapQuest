@@ -12,6 +12,7 @@ import {
   FaGoogle,
   FaLinkedinIn,
   FaPenSquare,
+  FaShieldAlt,
 } from "react-icons/fa";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
@@ -65,7 +66,7 @@ export default function Footer() {
             </Link>
             <Link href="/privacypolicy" legacyBehavior>
               <a className="hover:text-blue-400 flex items-center">
-                <FaPenSquare className="w-4 h-4 mr-1" />
+                <FaShieldAlt className="w-4 h-4 mr-1" />
                 Privacy Policy
               </a>
             </Link>

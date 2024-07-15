@@ -1,10 +1,25 @@
 import { Nav } from "@/components/Nav";
 import React from "react";
 import Footer from "@/components/Footer";
-const PrivacyPolicy = () => {
+import Link from "next/link";
+import Image from "next/image";
+import homeIcon from './homeicon.png'; // Adjust the path to homeicon.png as per your project structure
+
+const PrivacyPolicy: React.FC = () => {
+  const homeIconStyle: React.CSSProperties = {
+    position: 'absolute',
+    top: '4rem', // Adjust as needed for positioning
+    left: '2.5rem', // Adjust as needed for positioning
+    width: '2.5rem',
+    cursor: 'pointer'
+  };
+
   return (
     <div className="relative">
       <Nav />
+      <Link href="/" passHref>
+        <Image src={homeIcon} alt="Home" style={homeIconStyle} width={50} height={50} />
+      </Link>
       <div className="container mx-auto p-6 max-w-[48rem]">
         <h1 className="text-4xl font-bold mb-6 text-center">
           Privacy{" "}
@@ -90,7 +105,6 @@ const PrivacyPolicy = () => {
           </ul>
         </section>
 
-
         <section className="mb-6">
           <h2 className="text-2xl font-semibold mb-4 text-center">
             Data Security
@@ -120,7 +134,6 @@ const PrivacyPolicy = () => {
           of any changes by posting the new Privacy Policy on this page.
           </p>
         </section>
-
 
         <section className="mb-6">
           <h2 className="text-2xl font-semibold mb-4 text-center">Contact Us</h2>
