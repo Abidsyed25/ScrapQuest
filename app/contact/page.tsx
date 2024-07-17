@@ -6,17 +6,11 @@ import { Nav } from "@/components/Nav";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import homeIcon from './homeicon.png'; // Ensure this path is correct
-import Footer from '@/components/Footer';
-import contact from "./contact.jpg"
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaGoogle,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import homeIcon from "./homeicon.png"; // Ensure this path is correct
+import Footer from "@/components/Footer";
+import contact from "./contact.jpg";
+import { FaFacebookF, FaTwitter, FaGoogle, FaLinkedinIn } from "react-icons/fa";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
 
 // Define the form schema using zod
 const formSchema = z.object({
@@ -41,19 +35,6 @@ export default function Contact() {
     },
   });
 
-  // Disable scrolling on mount
-  // useEffect(() => {
-  //   const disableScroll = () => {
-  //     document.body.style.overflow = 'hidden';
-  //   };
-  //   disableScroll();
-
-  //   // Re-enable scrolling when component unmounts
-  //   return () => {
-  //     document.body.style.overflow = 'visible';
-  //   };
-  // }, []);
-
   // Handle form submission
   const handleSubmit = (values: z.infer<typeof formSchema>) => {
     console.log(values);
@@ -68,7 +49,9 @@ export default function Contact() {
     if (form.watch("feedbackType") === "other") {
       return (
         <div className="flex flex-col">
-          <label htmlFor="otherFeedback" className="font-semibold">Other Feedback</label>
+          <label htmlFor="otherFeedback" className="font-semibold">
+            Other Feedback
+          </label>
           <textarea
             id="otherFeedback"
             placeholder="Enter your feedback here"
@@ -76,7 +59,9 @@ export default function Contact() {
             className="p-2 border rounded resize-none text-black"
           />
           {form.formState.errors.otherFeedback && (
-            <p className="text-red-500">{form.formState.errors.otherFeedback.message}</p>
+            <p className="text-red-500">
+              {form.formState.errors.otherFeedback.message}
+            </p>
           )}
         </div>
       );
@@ -85,16 +70,16 @@ export default function Contact() {
   };
 
   const homeIconStyle: React.CSSProperties = {
-    position: 'absolute',
-    top: '4rem', // Adjust as needed for positioning
-    left: '1rem', // Adjust as needed for positioning
-    width: '2.5rem',
-    cursor: 'pointer'
+    position: "absolute",
+    top: "4rem", // Adjust as needed for positioning
+    left: "1rem", // Adjust as needed for positioning
+    width: "2.5rem",
+    cursor: "pointer",
   };
 
   return (
     <div className="relative">
-      <Nav />
+      <Nav/>
       <div className="w-full container mx-auto p-6 max-w-[48rem]">
         <Link href="/" passHref>
           <Image
@@ -111,13 +96,12 @@ export default function Contact() {
         <p className="pt-5 text-xl sm:text-2xl text-center">
           Facing an Issue? Fill up the form below 👇
         </p>
-        <main className="flex items-center justify-center bg-zinc-900 border-2 mt-10">
-          {/* <div className="flex flex-wrap flex-row justify-center items-center"> */}
-          <div className="flex flex-wrap flex-col justify-center items-center">
-            <div className="ml-10">
+        <main className="flex flex-col sm:flex-row items-center justify-center bg-zinc-900 border-2 mt-10 p-6 sm:p-0">
+          <div className="flex flex-col items-center">
+            <div className="flex-shrink-0 mb-6 sm:mb-0 sm:ml-10">
               <Image src={contact} height={650} width={410} alt="contact" />
             </div>
-            <div className="social-media flex justify-center mt-16 text-center ml-5">
+            <div className="social-media flex justify-center mt-6 sm:mt-16 text-center sm:ml-5">
               <a
                 href="https://www.facebook.com"
                 className="social-icon mx-2 hover:text-blue-400"
@@ -240,7 +224,6 @@ export default function Contact() {
               )}
             </div>
           </div>
-          {/* </div> */}
         </main>
       </div>
       <Footer />
