@@ -7,112 +7,134 @@ import {
   FaGithub,
   FaQuestionCircle,
   FaSignInAlt,
+  FaPenSquare,
+  FaShieldAlt,
   FaFacebookF,
   FaTwitter,
   FaGoogle,
   FaLinkedinIn,
-  FaPenSquare,
-  FaShieldAlt,
+  FaAddressBook
 } from "react-icons/fa";
-import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export default function Footer() {
   return (
-    <div className="bg-gradient-to-r from-blue-500 shadow-md w-screen text-white py-3 tracking-wider text-center text-sm max-[768px]:text-xs">
-      <div className="flex flex-col items-center">
-        <div className="flex max-[768px]:flex-col justify-between gap-4 items-center">
-          <div className="flex gap-4">
+    <footer className="bg-gradient-to-r from-[rgb(2,6,23)] via-[rgb(2,41,61)] to-[rgb(2,6,23)] text-white py-8">
+      <div className="max-w-screen-xl mx-auto px-4">
+        <div className="md:flex md:justify-between">
+          <div className="mb-6 md:mb-0">
             <Link href="/" legacyBehavior>
-              <a className="hover:text-blue-400 flex items-center">
-                <FaHome className="w-4 h-4 mr-1" />
-                Home
-              </a>
-            </Link>
-            <Link href="/about" legacyBehavior>
-              <a className="hover:text-blue-400 flex items-center">
-                <FaInfoCircle className="w-4 h-4 mr-1" />
-                About Us
-              </a>
-            </Link>
-            <Link href="/contact" legacyBehavior>
-              <a className="hover:text-blue-400 flex items-center">
-                <FaEnvelope className="w-4 h-4 mr-1" />
-                Contact
-              </a>
-            </Link>
-            <Link
-              href="https://github.com/Abidsyed25/ScrapQuest"
-              rel="noopener noreferrer"
-              legacyBehavior
-            >
-              <a className="text-white font-medium text-sm flex items-center hover:text-blue-400">
-                <FaGithub className="w-4 h-4 mr-1" />
-                Star on Github
-              </a>
+              <a className="text-2xl font-bold text-white">ScrapQuest</a>
             </Link>
           </div>
-          <div className="flex gap-4">
-            <Link href="/faq" legacyBehavior>
-              <a className="hover:text-blue-400 flex items-center">
-                <FaQuestionCircle className="w-4 h-4 mr-1" />
-                FAQ
-              </a>
-            </Link>
-            <Link href="/termsconditions" legacyBehavior>
-              <a className="hover:text-blue-400 flex items-center">
-                <FaPenSquare className="w-4 h-4 mr-1" />
-                Terms & Conditions
-              </a>
-            </Link>
-            <Link href="/privacypolicy" legacyBehavior>
-              <a className="hover:text-blue-400 flex items-center">
-                <FaShieldAlt className="w-4 h-4 mr-1" />
-                Privacy Policy
-              </a>
-            </Link>
-            <Link href="/login" legacyBehavior>
-                <a className="hover:text-blue-400 flex items-center">
-                  <FaSignInAlt className="w-4 h-4 mr-2" />
-                  Begin Your Journey
-                </a>
-            </Link>
+          <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-4">
+
+            <div>
+              <h2 className="mb-6 text-sm font-semibold text-blue-200 uppercase">Social Links</h2>
+              <ul className="text-blue-100">
+                <li className="mb-3">
+                  <a href="https://www.linkedin.com" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
+                    <FaLinkedinIn className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
+                    LinkedIn
+                  </a>
+                </li>
+                <li className="mb-3">
+                  <a href="https://www.gmail.com" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
+                    <FaEnvelope className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
+                    Email
+                  </a>
+                </li>
+                <li className="mb-3">
+                  <a href="https://www.facebook.com" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
+                    <FaFacebookF className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
+                    Facebook
+                  </a>
+                </li>
+                <li className="mb-3">
+                  <a href="https://www.twitter.com" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
+                    <FaTwitter className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
+                    Twitter
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h2 className="mb-6 text-sm font-semibold text-blue-200 uppercase">Resources</h2>
+              <ul className="text-blue-100">
+                <li className="mb-3">
+                  <a href="/" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
+                    <FaHome className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
+                    Home
+                  </a>
+                </li>
+                <li className="mb-3">
+                  <a href="/about" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
+                    <FaInfoCircle className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
+                    About Us
+                  </a>
+                </li>
+                <li className="mb-3">
+                  <a href="https://github.com/Abidsyed25/ScrapQuest" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
+                    <FaGithub className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
+                    Star on Github
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-6 text-sm font-semibold text-blue-200 uppercase">Help Center</h2>
+              <ul className="text-blue-100">
+                <li className="mb-3">
+                  <a href="/faq" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
+                    <FaQuestionCircle className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
+                    FAQ
+                  </a>
+                </li>
+                <li className="mb-3">
+                  <a href="/login" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
+                    <FaSignInAlt className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
+                    Begin Your Journey
+                  </a>
+                </li>
+                <li className="mb-3">
+                  <a href="/contact" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
+                    <FaAddressBook className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-6 text-sm font-semibold text-blue-200 uppercase">Legal</h2>
+              <ul className="text-blue-100">
+                <li className="mb-3">
+                  <a href="/privacypolicy" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
+                    <FaShieldAlt className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
+                    Privacy Policy
+                  </a>
+                </li>
+                <li className="mb-3">
+                  <a
+                    href="/termsconditions"
+                    className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center"
+                  >
+                    <FaPenSquare className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
+                    Terms &amp; Conditions
+                  </a>
+                </li>
+
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="mt-4">
-          <p className="social-text" style={{ color: "turquoise" }}>
-            Discover more about ScrapQuest and stay updated!
-          </p>
-          <div className="social-media flex justify-center mt-2">
-            <a
-              href="https://www.facebook.com"
-              className="social-icon mx-2 hover:text-blue-400"
-            >
-              <FaFacebookF className="w-5 h-5" />
-            </a>
-            <a
-              href="https://www.twitter.com"
-              className="social-icon mx-2 hover:text-blue-400"
-            >
-              <FaTwitter className="w-5 h-5" />
-            </a>
-            <a
-              href="https://www.gmail.com"
-              className="social-icon mx-2 hover:text-blue-400"
-            >
-              <FaGoogle className="w-5 h-5" />
-            </a>
-            <a
-              href="https://www.linkedin.com"
-              className="social-icon mx-2 hover:text-blue-400"
-            >
-              <FaLinkedinIn className="w-5 h-5" />
-            </a>
-          </div>
+        <hr className="my-6 border-blue-400 sm:mx-auto" />
+        <div className="text-center mt-4">
+          <span className="text-base text-blue-200 italic">
+            © 2024 ScrapQuest™. All Rights Reserved.
+          </span>
         </div>
-        <h1 className="mt-4">
-          Copyright © 2024, ScrapQuest. All Rights Reserved.
-        </h1>
+
       </div>
-    </div>
+    </footer>
   );
 }
