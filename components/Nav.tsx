@@ -2,6 +2,7 @@
 
 import { FaHome, FaInfoCircle, FaEnvelope, FaGithub, FaQuestionCircle, FaSignInAlt, FaPenSquare, FaShieldAlt } from "react-icons/fa";
 import { Navbar } from "flowbite-react";
+import GoogleTranslate from "@/app/GoogleTranslate";
 
 export function Nav() {
   return (
