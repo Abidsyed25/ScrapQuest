@@ -21,6 +21,7 @@
     "@tsparticles/slim": "^3.4.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "firebase": "^10.12.4",
     "flowbite-react": "^0.9.0",
     "framer-motion": "^11.2.12",
     "lucide-react": "^0.400.0",

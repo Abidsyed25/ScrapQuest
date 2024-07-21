@@ -1,9 +1,11 @@
 "use client";
 
-import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
-import * as z from "zod";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { auth } from "../Firebase/firebase"; // Assuming you have a firebaseConfig file
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faHouse } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/navigation';
@@ -15,11 +17,11 @@ const formSchema = z.object({
   password: z.string().min(6, "*Password should be at least 6 characters"),
 });
 
-// Contact form component
 export default function SignInSignUp() {
-  const [type, setType] = useState('signIn');
+  const [type, setType] = useState("signIn");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const router = useRouter();
 
   const signInForm = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -55,21 +57,35 @@ export default function SignInSignUp() {
     setTimeout(() => setIsSubmitted(false), 3000); // Hide notification after 3 seconds
   };
 
+  const handleGoogleSignIn = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      console.log("Google Sign-In successful:", user);
+      // Handle success (e.g., redirect, save user info, etc.)
+    } catch (error) {
+      console.error("Google Sign-In error:", error);
+    }
+  };
+
   const handleOnClick = (text: string) => {
     if (text !== type) {
       setType(text);
     }
   };
-  const router = useRouter();
-  const homeClickHandler= ()=>{
-    router.push('/');
+
+  const homeClickHandler = () => {
+    router.push("/");
   };
 
   const togglePasswordVisibility = () => {
     setIsVisible(!isVisible);
   };
-  
-  const containerClass = `container ${type === 'signUp' ? 'right-panel-active' : ''}`;
+
+  const containerClass = `container ${
+    type === "signUp" ? "right-panel-active" : ""
+  }`;
 
   return (
     <div className="App">
@@ -312,141 +328,219 @@ export default function SignInSignUp() {
         .container.right-panel-active .overlay-right {
           transform: translateX(20%);
         }
-
-        /* Styling for social icons */
         .social-container {
-          display: flex;
-          justify-content: center;
-          margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 10px; /* Space between icons */
+  margin-top: 20px; /* Optional: Add some margin to the top */
+}
+
+.social-container .social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: darkturquoise;
+  margin: 0; /* Remove left and right margins, using gap instead */
+  font-size: 20px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.social-container .social:hover {
+  transform: scale(1.1);
+}
+  
+
+
+        .form-container input {
+          position: relative;
+          display: inline-block;
         }
 
-        .social-container .social {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 50px;
-          width: 50px;
-          border-radius: 50%;
-          background-color: darkturquoise;
-          margin: 0 10px;
-          font-size: 20px;
+        .password-input-container {
+          position: relative;
+          width: 100%;
+        }
+
+        .fab {
+          font-size: 24px;
+        }
+
+        .notification {
+          background-color: #242533;
           color: white;
-          transition: transform 0.3s ease;
+          padding: 10px;
+          border-radius: 5px;
+          margin-top: 10px;
+          border: solid 2px darkturquoise;
         }
 
-        .social-container .social:hover {
-          transform: scale(1.1);
+        .house-container {
+          position: absolute;
+          top: 8px; /* Adjust as needed */
+          left: 8px; /* Adjust as needed */
+          z-index: 1000; /* Ensure it is above other elements */
         }
-
       `}</style>
-      <div className={containerClass} id="container">
+      <div className={containerClass}>
+        <div className="house-container">
+          <FontAwesomeIcon
+            icon={faHouse}
+            size="2x"
+            color="darkturquoise"
+            onClick={homeClickHandler}
+            style={{ cursor: "pointer" }}
+          />
+        </div>
         <div className="form-container sign-up-container">
-          <div className='relative'>
-            <button className='eye-button' onClick={homeClickHandler}>
-              <FontAwesomeIcon icon={faHouse} className='h-5 w-5'></FontAwesomeIcon>
-            </button>
-          </div>
-          <form onSubmit={signUpForm.handleSubmit(handleSignUpSubmit)}>
+          <form
+            onSubmit={signUpForm.handleSubmit(handleSignUpSubmit)}
+            style={{ position: "relative" }}
+          >
             <h1>Create Account</h1>
             <div className="social-container">
-  <a href="https://www.facebook.com" className="social">
-    <i className="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://www.google.com" className="social">
-    <i className="fab fa-google-plus-g"></i>
-  </a>
-  <a href="https://www.linkedin.com" className="social">
-    <i className="fab fa-linkedin-in"></i>
-  </a>
-  <a href="https://www.twitter.com" className="social">
-    <i className="fab fa-twitter"></i>
-  </a>
-</div>
-
-            <br></br>
+              <a href="#" className="social">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" className="social" onClick={handleGoogleSignIn}>
+                <i className="fab fa-google-plus-g"></i>
+              </a>
+              <a href="#" className="social">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+            <a href="https://www.twitter.com" className="social">
+              <i className="fab fa-twitter"></i>
+              </a>
+            </div>
             <span>or use your email for registration</span>
-            <input type="text" placeholder="Name" {...signUpForm.register("name")} />
+            <input
+              {...signUpForm.register("name")}
+              type="text"
+              placeholder="Name"
+            />
             {signUpForm.formState.errors.name && (
-              <p className="text-darkturquoise">{signUpForm.formState.errors.name?.message}</p>
+              <p>{signUpForm.formState.errors.name.message}</p>
             )}
-            <input type="email" placeholder="Email" {...signUpForm.register("email")} />
+            <input
+              {...signUpForm.register("email")}
+              type="email"
+              placeholder="Email"
+            />
             {signUpForm.formState.errors.email && (
-              <p className="text-darkturquoise">{signUpForm.formState.errors.email?.message}</p>
+              <p>{signUpForm.formState.errors.email.message}</p>
             )}
-            <div style={{ position: 'relative', width: '100%' }}>
-              <input type={isVisible ? "text" : "password"} placeholder="Password" {...signUpForm.register("password")} />
-              <button type="button" className="eye-button" onClick={togglePasswordVisibility}>
-                <FontAwesomeIcon icon={isVisible ? faEyeSlash : faEye} />
+            <div className="password-input-container">
+              <input
+                {...signUpForm.register("password")}
+                type={isVisible ? "text" : "password"}
+                placeholder="Password"
+              />
+              <button
+                type="button"
+                className="eye-button"
+                onClick={togglePasswordVisibility}
+              >
+                <FontAwesomeIcon
+                  icon={isVisible ? faEyeSlash : faEye}
+                  color="darkturquoise"
+                />
               </button>
             </div>
             {signUpForm.formState.errors.password && (
-              <p className="text-darkturquoise">{signUpForm.formState.errors.password?.message}</p>
+              <p>{signUpForm.formState.errors.password.message}</p>
             )}
             <button type="submit">Sign Up</button>
+            {isSubmitted && <div className="notification">Success!</div>}
           </form>
         </div>
+
         <div className="form-container sign-in-container">
-          <div className='relative'>
-            <button className='eye-button' onClick={homeClickHandler}>
-              <FontAwesomeIcon icon={faHouse} className='h-5 w-5'></FontAwesomeIcon>
-            </button>
-          </div>
-          <form onSubmit={signInForm.handleSubmit(handleSignInSubmit)} >
-            <h1>Access your Account</h1>
+          <form
+            onSubmit={signInForm.handleSubmit(handleSignInSubmit)}
+            style={{ position: "relative" }}
+          >
+            <h1>Sign in</h1>
             <div className="social-container">
-            <a href="https://www.facebook.com" className="social">
-    <i className="fab fa-facebook-f"></i>
-  </a>
-  <a href="https://www.google.com" className="social">
-    <i className="fab fa-google-plus-g"></i>
-  </a>
-  <a href="https://www.linkedin.com" className="social">
-    <i className="fab fa-linkedin-in"></i>
-  </a>
-  <a href="https://www.twitter.com" className="social">
-    <i className="fab fa-twitter"></i>
-  </a>
-</div>
-            <br></br>
-            <span>or Proceed with Your Profile</span>
-            <input type="email" placeholder="Email" {...signInForm.register("email")} />
+              <a href="#" className="social">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" className="social" onClick={handleGoogleSignIn}>
+                <i className="fab fa-google-plus-g"></i>
+              </a>
+              <a href="#" className="social">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.twitter.com" className="social">
+             <i className="fab fa-twitter"></i>
+             </a>
+            </div>
+            <span>or use your account</span>
+            <input
+              {...signInForm.register("email")}
+              type="email"
+              placeholder="Email"
+            />
             {signInForm.formState.errors.email && (
-              <p className="text-darkturquoise">{signInForm.formState.errors.email?.message}</p>
+              <p>{signInForm.formState.errors.email.message}</p>
             )}
-            <div style={{ position: 'relative', width: '100%' }}>
-              <input type={isVisible ? "text" : "password"} placeholder="Password" {...signInForm.register("password")} />
-              <button type="button" className="eye-button" onClick={togglePasswordVisibility}>
-                <FontAwesomeIcon icon={isVisible ? faEyeSlash : faEye} />
+            <div className="password-input-container">
+              <input
+                {...signInForm.register("password")}
+                type={isVisible ? "text" : "password"}
+                placeholder="Password"
+              />
+              <button
+                type="button"
+                className="eye-button"
+                onClick={togglePasswordVisibility}
+              >
+                <FontAwesomeIcon
+                  icon={isVisible ? faEyeSlash : faEye}
+                  color="darkturquoise"
+                />
               </button>
             </div>
             {signInForm.formState.errors.password && (
-              <p className="text-darkturquoise">{signInForm.formState.errors.password?.message}</p>
+              <p>{signInForm.formState.errors.password.message}</p>
             )}
-            <span>
-  <a href="https://scrap-quest.vercel.app/">Forgot your password?</a>
-</span>
-            <br></br>
             <button type="submit">Sign In</button>
+            {isSubmitted && <div className="notification">Success!</div>}
           </form>
         </div>
+
         <div className="overlay-container">
           <div className="overlay">
             <div className="overlay-panel overlay-left">
               <h1>Welcome Back!</h1>
-              <p>To keep connected with us please login with your personal info</p>
-              <button className="ghost" onClick={() => handleOnClick('signIn')}>Sign In</button>
+              <p>
+                To keep connected with us please login with your personal info
+              </p>
+              <button
+                className="ghost"
+                id="signIn"
+                onClick={() => handleOnClick("signIn")}
+              >
+                Sign In
+              </button>
             </div>
             <div className="overlay-panel overlay-right">
-              <h1>Welcome aboard!</h1>
-              <p>Share a bit about yourself and let's embark on a journey together filled with discovery and excitement.</p>
-              <button className="ghost" onClick={() => handleOnClick('signUp')}>Sign Up</button>
+              <h1>Hello, Friend!</h1>
+              <p>Enter your personal details and start your journey with us</p>
+              <button
+                className="ghost"
+                id="signUp"
+                onClick={() => handleOnClick("signUp")}
+              >
+                Sign Up
+              </button>
             </div>
           </div>
         </div>
       </div>
-      {isSubmitted && (
-        <p className="mt-4 text-Blue-1000">Form submitted successfully!</p>
-      )}
     </div>
   );
 }
