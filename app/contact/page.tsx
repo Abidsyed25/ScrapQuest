@@ -9,7 +9,8 @@ import Image from "next/image";
 import homeIcon from "./homeicon.png"; // Ensure this path is correct
 import Footer from "@/components/Footer";
 import contact from "./contact.jpg";
-import { FaFacebookF, FaTwitter, FaGoogle, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaGoogle, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 // Define the form schema using zod
@@ -109,10 +110,10 @@ export default function Contact() {
                 <FaFacebookF className="w-5 h-5" />
               </a>
               <a
-                href="https://www.twitter.com"
+                href="https://www.x.com"
                 className="social-icon mx-2 hover:text-blue-400"
               >
-                <FaTwitter className="w-5 h-5" />
+                <FaXTwitter className="w-5 h-5" />
               </a>
               <a
                 href="https://www.gmail.com"

@@ -7,6 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { auth } from "../Firebase/firebase"; // Assuming you have a firebaseConfig file
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaXTwitter } from "react-icons/fa6";
 import { faEye, faEyeSlash, faHouse } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/navigation';
 
@@ -412,8 +413,8 @@ export default function SignInSignUp() {
               <a href="#" className="social">
                 <i className="fab fa-linkedin-in"></i>
               </a>
-            <a href="https://www.twitter.com" className="social">
-              <i className="fab fa-twitter"></i>
+            <a href="https://www.x.com" className="social">
+              <FaXTwitter className="w-6 h-6" />
               </a>
             </div>
             <span>or use your email for registration</span>
@@ -474,9 +475,9 @@ export default function SignInSignUp() {
               <a href="#" className="social">
                 <i className="fab fa-linkedin-in"></i>
               </a>
-              <a href="https://www.twitter.com" className="social">
-             <i className="fab fa-twitter"></i>
-             </a>
+              <a href="https://www.x.com" className="social">
+              <FaXTwitter className="w-6 h-6" />
+              </a>
             </div>
             <span>or use your account</span>
             <input
