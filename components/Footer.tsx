@@ -14,6 +14,7 @@ import {
   FaLinkedinIn,
   FaAddressBook
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -50,8 +51,8 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="mb-3">
-                  <a href="https://www.twitter.com" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
-                    <FaTwitter className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
+                  <a href="https://www.x.com" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
+                    <FaXTwitter className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
                     Twitter
                   </a>
                 </li>
