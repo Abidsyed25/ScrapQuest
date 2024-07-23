@@ -6,6 +6,7 @@ import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { getAuth, GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from "firebase/auth";
 import { auth,githubProvider } from "../Firebase/firebase"; // Assuming you have a firebaseConfig file
+import { FacebookAuthProvider } from "firebase/auth";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash, faHouse } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/navigation';
@@ -77,6 +78,17 @@ export default function SignInSignUp() {
       console.error("GitHub Sign-In error:", error);
     }
   };
+  const handleFacebookSignIn = async () => {
+    const provider = new FacebookAuthProvider();
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      console.log("Facebook Sign-In successful:", user);
+    } catch (error) {
+      console.error("Facebook Sign-In error:", error);
+    }
+  };
+  
   const handleOnClick = (text: string) => {
     if (text !== type) {
       setType(text);
@@ -411,7 +423,7 @@ export default function SignInSignUp() {
           >
             <h1>Create Account</h1>
             <div className="social-container">
-              <a href="#" className="social">
+              <a href="#" className="social" onClick={handleFacebookSignIn}>
                 <i className="fab fa-facebook-f"></i>
               </a>
               <a href="#" className="social" onClick={handleGoogleSignIn}>
@@ -476,7 +488,7 @@ export default function SignInSignUp() {
           >
             <h1>Sign in</h1>
             <div className="social-container">
-              <a href="#" className="social">
+              <a href="#" className="social" onClick={handleFacebookSignIn}>
                 <i className="fab fa-facebook-f"></i>
               </a>
               <a href="#" className="social" onClick={handleGoogleSignIn}>
