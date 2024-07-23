@@ -47,7 +47,6 @@ const About: React.FC = () => {
         </div>
 
         <div className="relative bg-gradient-to-r from-gray-700 to-gray-900 p-6 rounded-lg shadow-inner">
-          
           <div className="relative z-10">
             <h2 className="text-3xl text-center font-semibold mb-4 text-white animate-pulse">
               Welcome to ScrapQuest!
