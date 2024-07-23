@@ -8,6 +8,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from
 import { auth,githubProvider } from "../Firebase/firebase"; // Assuming you have a firebaseConfig file
 import { FacebookAuthProvider } from "firebase/auth";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaXTwitter } from "react-icons/fa6";
 import { faEye, faEyeSlash, faHouse } from '@fortawesome/free-solid-svg-icons';
 import { useRouter } from 'next/navigation';
 
@@ -432,8 +433,8 @@ export default function SignInSignUp() {
               <a href="#" className="social">
                 <i className="fab fa-linkedin-in"></i>
               </a>
-            <a href="https://www.twitter.com" className="social">
-              <i className="fab fa-twitter"></i>
+            <a href="https://www.x.com" className="social">
+              <FaXTwitter className="w-6 h-6" />
               </a>
               <a href="#" className="social" onClick={handleGithubSignIn}>
               <i className="fab fa-github"></i>
@@ -497,8 +498,8 @@ export default function SignInSignUp() {
               <a href="#" className="social">
                 <i className="fab fa-linkedin-in"></i>
               </a>
-              <a href="https://www.twitter.com" className="social">
-             <i className="fab fa-twitter"></i>
+              <a href="https://www.x.com" className="social">
+              <FaXTwitter className="w-6 h-6" />
              </a>
              <a href="#" className="social" onClick={handleGithubSignIn}>
               <i className="fab fa-github"></i>
