@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { auth } from "../Firebase/firebase"; // Assuming you have a firebaseConfig file
+import { getAuth, GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from "firebase/auth";
+import { auth,githubProvider } from "../Firebase/firebase"; // Assuming you have a firebaseConfig file
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaXTwitter } from "react-icons/fa6";
 import { faEye, faEyeSlash, faHouse } from '@fortawesome/free-solid-svg-icons';
@@ -69,7 +69,15 @@ export default function SignInSignUp() {
       console.error("Google Sign-In error:", error);
     }
   };
-
+  const handleGithubSignIn = async () => {
+    try {
+      const result = await signInWithPopup(auth, githubProvider);
+      const user = result.user;
+      console.log("GitHub Sign-In successful:", user);
+    } catch (error) {
+      console.error("GitHub Sign-In error:", error);
+    }
+  };
   const handleOnClick = (text: string) => {
     if (text !== type) {
       setType(text);
@@ -416,6 +424,9 @@ export default function SignInSignUp() {
             <a href="https://www.x.com" className="social">
               <FaXTwitter className="w-6 h-6" />
               </a>
+              <a href="#" className="social" onClick={handleGithubSignIn}>
+              <i className="fab fa-github"></i>
+              </a>
             </div>
             <span>or use your email for registration</span>
             <input
@@ -477,6 +488,9 @@ export default function SignInSignUp() {
               </a>
               <a href="https://www.x.com" className="social">
               <FaXTwitter className="w-6 h-6" />
+             </a>
+             <a href="#" className="social" onClick={handleGithubSignIn}>
+              <i className="fab fa-github"></i>
               </a>
             </div>
             <span>or use your account</span>
