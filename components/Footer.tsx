@@ -13,7 +13,8 @@ import {
   FaTwitter,
   FaGoogle,
   FaLinkedinIn,
-  FaAddressBook
+  FaAddressBook,
+  FaFileContract
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -120,6 +121,15 @@ export default function Footer() {
                   >
                     <FaPenSquare className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
                     Terms &amp; Conditions
+                  </a>
+                </li>
+                <li className="mb-3">
+                  <a
+                    href="/licensing"
+                    className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center"
+                  >
+                    <FaFileContract className="w-4 h-4 mr-2" />
+                    Licensing
                   </a>
                 </li>
 
