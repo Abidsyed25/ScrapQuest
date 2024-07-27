@@ -46,41 +46,48 @@ const TermsAndConditions: React.FC = () => {
         </div>
 
         <div className="relative bg-gradient-to-r from-gray-700 to-gray-900 p-6 rounded-lg shadow-inner mb-6">
-          <div className="relative z-10">
-            <h2 className="text-3xl text-center font-semibold mb-4 text-white animate-pulse">
-              Introduction
-            </h2>
-            <p className="mb-6 text-gray-300 leading-relaxed text-center">
-              These Terms and Conditions outline the rules and regulations for
-              the use of ScrapQuest's website and services. By accessing and
-              using our website, you accept and agree to comply with these
-              terms. If you do not agree with any part of these terms, you
-              should not use our website or services.
-            </p>
-          </div>
+          <h2 className="text-3xl text-center font-semibold mb-4 text-white animate-pulse">
+            Introduction
+          </h2>
+          <p className="mb-6 text-gray-300 leading-relaxed text-center">
+            These Terms and Conditions outline the rules and regulations for the
+            use of ScrapQuest's website and services. By accessing and using our
+            website, you accept and agree to comply with these terms. If you do
+            not agree with any part of these terms, you should not use our
+            website or services.
+          </p>
         </div>
 
-        <div className=" p-4 rounded-lg shadow-lg mb-6">
-          <h2 className="text-3xl text-center font-semibold mb-4 text-white">
+        <div className="p-4 rounded-lg shadow-lg mb-6">
+          <h2 className="text-3xl font-semibold mb-4 text-white">
             Definitions
           </h2>
-          <ul className="list-disc list-inside text-gray-300 leading-relaxed">
-            <li>
-              <strong>"Service"</strong> refers to the web scraping services
-              provided by ScrapQuest.
+          <ul className="list-none pl-0 text-gray-300 leading-relaxed">
+            <li className="flex items-start mb-3">
+              <span className="w-4 h-4 mr-2 mt-1 bg-green-500 rounded-full flex-shrink-0"></span>
+              <span>
+                <strong>"Service"</strong> refers to the web scraping services
+                provided by ScrapQuest.
+              </span>
             </li>
-            <li>
-              <strong>"We," "Us," "Our"</strong> refers to ScrapQuest.
+            <li className="flex items-start mb-3">
+              <span className="w-4 h-4 mr-2 mt-1 bg-green-500 rounded-full flex-shrink-0"></span>
+              <span>
+                <strong>"We," "Us," "Our"</strong> refers to ScrapQuest.
+              </span>
             </li>
-            <li>
-              <strong>"You," "Your"</strong> refers to the user or customer of
-              our website and services.
+            <li className="flex items-start mb-3">
+              <span className="w-4 h-4 mr-2 mt-1 bg-green-500 rounded-full flex-shrink-0"></span>
+              <span>
+                <strong>"You," "Your"</strong> refers to the user or customer of
+                our website and services.
+              </span>
             </li>
           </ul>
         </div>
 
-        <div className=" p-4 rounded-lg shadow-lg mb-6">
-          <h2 className="text-3xl text-center font-semibold mb-4 text-white">
+        <div className="p-4 rounded-lg shadow-lg mb-6">
+          <h2 className="text-3xl font-semibold mb-4 text-white">
             Use of Service
           </h2>
           <h3 className="text-2xl font-semibold mb-4 text-white">
@@ -106,24 +113,38 @@ const TermsAndConditions: React.FC = () => {
           <h3 className="text-2xl font-semibold mb-4 text-white">
             Prohibited Activities
           </h3>
-          <ul className="list-disc list-inside text-gray-300 leading-relaxed space-y-2">
-            <li>Use our services for any illegal or unauthorized purpose.</li>
-            <li>
-              Attempt to gain unauthorized access to our systems or networks.
+          <ul className="list-none pl-0 text-gray-300 leading-relaxed">
+            <li className="flex items-start mb-3">
+              <span className="w-4 h-4 mr-2 mt-1 bg-red-500 rounded-full flex-shrink-0"></span>
+              <span>
+                Use our services for any illegal or unauthorized purpose.
+              </span>
             </li>
-            <li>
-              Use our services to scrape websites that you do not have
-              permission to scrape.
+            <li className="flex items-start mb-3">
+              <span className="w-4 h-4 mr-2 mt-1 bg-red-500 rounded-full flex-shrink-0"></span>
+              <span>
+                Attempt to gain unauthorized access to our systems or networks.
+              </span>
             </li>
-            <li>
-              Interfere with or disrupt the integrity or performance of our
-              services.
+            <li className="flex items-start mb-3">
+              <span className="w-4 h-4 mr-2 mt-1 bg-red-500 rounded-full flex-shrink-0"></span>
+              <span>
+                Use our services to scrape websites that you do not have
+                permission to scrape.
+              </span>
+            </li>
+            <li className="flex items-start mb-3">
+              <span className="w-4 h-4 mr-2 mt-1 bg-red-500 rounded-full flex-shrink-0"></span>
+              <span>
+                Interfere with or disrupt the integrity or performance of our
+                services.
+              </span>
             </li>
           </ul>
         </div>
 
-        <div className=" p-4 rounded-lg shadow-lg mb-6">
-          <h2 className="text-3xl text-center font-semibold mb-4 text-white">
+        <div className="p-4 rounded-lg shadow-lg mb-6">
+          <h2 className="text-3xl font-semibold mb-4 text-white">
             Intellectual Property
           </h2>
           <p className="text-gray-300 leading-relaxed">
@@ -134,8 +155,8 @@ const TermsAndConditions: React.FC = () => {
           </p>
         </div>
 
-        <div className=" p-4 rounded-lg shadow-lg mb-6">
-          <h2 className="text-3xl text-center font-semibold mb-4 text-white">
+        <div className="p-4 rounded-lg shadow-lg mb-6">
+          <h2 className="text-3xl font-semibold mb-4 text-white">
             Data Privacy
           </h2>
           <p className="text-gray-300 leading-relaxed">
@@ -151,8 +172,8 @@ const TermsAndConditions: React.FC = () => {
           </p>
         </div>
 
-        <div className=" p-4 rounded-lg shadow-lg mb-6">
-          <h2 className="text-3xl text-center font-semibold mb-4 text-white">
+        <div className="p-4 rounded-lg shadow-lg mb-6">
+          <h2 className="text-3xl font-semibold mb-4 text-white">
             Limitation of Liability
           </h2>
           <p className="text-gray-300 leading-relaxed">
@@ -162,21 +183,37 @@ const TermsAndConditions: React.FC = () => {
             incurred directly or indirectly, or any loss of data, use, goodwill,
             or other intangible losses resulting from:
           </p>
-          <ul className="list-disc list-inside text-gray-300 leading-relaxed space-y-2">
-            <li>Your use or inability to use our services.</li>
-            <li>
-              Any unauthorized access to or use of our servers and/or any
-              personal information stored therein.
+          <ul className="list-none pl-0 text-gray-300 leading-relaxed">
+            <li className="flex items-start mb-3">
+              <span className="w-4 h-4 mr-2 mt-1 bg-red-500 rounded-full flex-shrink-0"></span>
+              <span>Your use or inability to use our services.</span>
             </li>
-            <li>
-              Any interruption or cessation of transmission to or from our
-              services.
+            <li className="flex items-start mb-3">
+              <span className="w-4 h-4 mr-2 mt-1 bg-red-500 rounded-full flex-shrink-0"></span>
+              <span>
+                Any unauthorized access to or use of our servers and/or any
+                personal information stored therein.
+              </span>
+            </li>
+            <li className="flex items-start mb-3">
+              <span className="w-4 h-4 mr-2 mt-1 bg-red-500 rounded-full flex-shrink-0"></span>
+              <span>
+                Any interruption or cessation of transmission to or from our
+                services.
+              </span>
+            </li>
+            <li className="flex items-start mb-3">
+              <span className="w-4 h-4 mr-2 mt-1 bg-red-500 rounded-full flex-shrink-0"></span>
+              <span>
+                Any bugs, viruses, trojan horses, or the like that may be
+                transmitted to or through our services.
+              </span>
             </li>
           </ul>
         </div>
 
         <div className="p-4 rounded-lg shadow-lg mb-6">
-          <h2 className="text-3xl text-center font-semibold mb-4 text-white">
+          <h2 className="text-3xl font-semibold mb-4 text-white">
             Indemnification
           </h2>
           <p className="text-gray-300 leading-relaxed">
@@ -188,8 +225,8 @@ const TermsAndConditions: React.FC = () => {
           </p>
         </div>
 
-        <div className=" p-4 rounded-lg shadow-lg mb-6">
-          <h2 className="text-3xl text-center font-semibold mb-4 text-white">
+        <div className="p-4 rounded-lg shadow-lg mb-6">
+          <h2 className="text-3xl font-semibold mb-4 text-white">
             Modifications to the Service and Terms
           </h2>
           <p className="text-gray-300 leading-relaxed">
