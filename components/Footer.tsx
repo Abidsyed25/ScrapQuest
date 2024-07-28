@@ -11,13 +11,15 @@ import {
   FaShieldAlt,
   FaFacebookF,
   FaTwitter,
-  FaGoogle,
   FaLinkedinIn,
   FaAddressBook,
   FaFileContract
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-gradient-to-r from-[rgb(2,6,23)] via-[rgb(2,41,61)] to-[rgb(2,6,23)] text-white py-8">
       <div className="max-w-screen-xl mx-auto px-4">
@@ -28,7 +30,6 @@ export default function Footer() {
             </Link>
           </div>
           <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-4">
-
             <div>
               <h2 className="mb-6 text-sm font-semibold text-blue-200 uppercase">Social Links</h2>
               <ul className="text-blue-100">
@@ -39,7 +40,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="mb-3">
-                  <a href="https://www.gmail.com" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
+                  <a href="mailto:example@example.com" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
                     <FaEnvelope className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
                     Email
                   </a>
@@ -51,14 +52,13 @@ export default function Footer() {
                   </a>
                 </li>
                 <li className="mb-3">
-                  <a href="https://www.twitter.com" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
-                    <FaTwitter className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
+                  <a href="https://www.x.com" className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center">
+                    <FaXTwitter className="w-4 h-4 mr-3 transition-all duration-300 transform-origin-center" />
                     Twitter
                   </a>
                 </li>
               </ul>
             </div>
-
             <div>
               <h2 className="mb-6 text-sm font-semibold text-blue-200 uppercase">Resources</h2>
               <ul className="text-blue-100">
@@ -123,6 +123,7 @@ export default function Footer() {
                     Terms &amp; Conditions
                   </a>
                 </li>
+
                 <li className="mb-3">
                   <a
                     href="/licensing"
@@ -133,6 +134,7 @@ export default function Footer() {
                   </a>
                 </li>
 
+
               </ul>
             </div>
           </div>
@@ -140,10 +142,9 @@ export default function Footer() {
         <hr className="my-6 border-blue-400 sm:mx-auto" />
         <div className="text-center mt-4">
           <span className="text-base text-blue-200 italic">
-            © 2024 ScrapQuest™. All Rights Reserved.
+            &copy; {currentYear} ScrapQuest™. All Rights Reserved.
           </span>
         </div>
-
       </div>
     </footer>
   );
