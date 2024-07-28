@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { getAuth, GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup, GithubAuthProvider, TwitterAuthProvider } from "firebase/auth";
 import { auth,githubProvider } from "../Firebase/firebase"; // Assuming you have a firebaseConfig file
 import { FacebookAuthProvider } from "firebase/auth";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -87,6 +87,18 @@ export default function SignInSignUp() {
       console.log("Facebook Sign-In successful:", user);
     } catch (error) {
       console.error("Facebook Sign-In error:", error);
+    }
+  };
+
+  const handleTwitterSignIn = async () => {
+    const provider = new TwitterAuthProvider();
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      console.log("Twitter Sign-In successful:", user);
+      // Handle success (e.g., redirect, save user info, etc.)
+    } catch (error) {
+      console.error("Twitter Sign-In error:", error);
     }
   };
   
@@ -433,7 +445,7 @@ export default function SignInSignUp() {
               <a href="#" className="social">
                 <i className="fab fa-linkedin-in"></i>
               </a>
-            <a href="https://www.x.com" className="social">
+              <a href="#" className="social" onClick={handleTwitterSignIn}>
               <FaXTwitter className="w-6 h-6" />
               </a>
               <a href="#" className="social" onClick={handleGithubSignIn}>
@@ -498,9 +510,9 @@ export default function SignInSignUp() {
               <a href="#" className="social">
                 <i className="fab fa-linkedin-in"></i>
               </a>
-              <a href="https://www.x.com" className="social">
+              <a href="#" className="social" onClick={handleTwitterSignIn}>
               <FaXTwitter className="w-6 h-6" />
-             </a>
+               </a>
              <a href="#" className="social" onClick={handleGithubSignIn}>
               <i className="fab fa-github"></i>
               </a>
