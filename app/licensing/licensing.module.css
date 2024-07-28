@@ -1,0 +1,45 @@
+.faqBackground {
+    background: linear-gradient(34deg, transparent, rgba(1, 77, 114, 0.556));
+  }
+  
+  .homeIcon {
+    position: absolute !important;
+    top: 4rem; 
+    left: 1rem;
+    width: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  }
+  
+  .homeIcon:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 4px 8px rgba(0, 108, 106, 0.767) !important;
+  }
+  
+  .licensingContainer {
+    color: #fff;
+    width: 100%;
+  }
+  
+  .faqTitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 35px;
+    text-shadow: 1px 1px 2px rgb(1, 53, 79), 0 0 1em rgb(24, 159, 226), 0 0 0.2em blue;
+    font-size: 42px;
+  }
+  
+  
+  .mitLicenseTitle {
+    font-size: 25px; 
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1.1rem;
+  }
+  
+  .paragraph {
+    font-size: 20px; 
+    line-height:2;
+    margin-bottom: 20px;
+  }
+  

@@ -12,7 +12,8 @@ import {
   FaFacebookF,
   FaTwitter,
   FaLinkedinIn,
-  FaAddressBook
+  FaAddressBook,
+  FaFileContract
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -122,6 +123,18 @@ export default function Footer() {
                     Terms &amp; Conditions
                   </a>
                 </li>
+
+                <li className="mb-3">
+                  <a
+                    href="/licensing"
+                    className="hover:text-white flex items-center text-base hover:scale-110 transition-all duration-300 transform-origin-center"
+                  >
+                    <FaFileContract className="w-4 h-4 mr-2" />
+                    Licensing
+                  </a>
+                </li>
+
+
               </ul>
             </div>
           </div>
