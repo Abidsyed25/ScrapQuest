@@ -18,11 +18,8 @@ const FAQ: React.FC = () => {
   
   return (
     <>
-      <div className="relative faq-background">
+      <div className="relative bg-gradient-to-r from-[rgb(2,6,23)] via-[rgb(5,45,65)] to-[rgb(2,6,23)] text-white min-h-screen">
         <Nav />
-        <Link href="/" passHref>
-          <Image src={homeIcon} alt="Home" className="home-icon" width={50} height={50} />
-        </Link>
         <div className="container mx-auto p-6 max-w-[48rem]">
           <h1 className="text-4xl font-bold mb-6 faq-title">
             Frequently Asked{" "}
