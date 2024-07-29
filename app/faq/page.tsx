@@ -29,8 +29,8 @@ const FAQ: React.FC = () => {
             <span>Questions</span>
           </h1>
           <div className="flex flex-col items-center justify-center">
-            <div style={{ width: "725px" }}>
-              <Accordion type="single" collapsible className="w-full">
+            <div style={{ width: "750px" }}>
+              <Accordion type="multiple" collapsible className="w-full">
                 {faqs.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="my-4">
                     <AccordionTrigger className="accordion-trigger">
