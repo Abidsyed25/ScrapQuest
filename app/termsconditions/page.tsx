@@ -14,7 +14,7 @@ const TermsAndConditions = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative bg-gradient-to-r from-[rgb(2,6,23)] via-[rgb(5,45,65)] to-[rgb(2,6,23)] text-white min-h-screen">
       <Nav />
       <div className="container mx-auto p-6 max-w-[48rem]">
         <div style={{ position: 'relative' }}>
@@ -192,25 +192,27 @@ const TermsAndConditions = () => {
         </section>
 
         <section className="mb-6">
-          <h2 className="text-2xl font-semibold mb-4 text-center">
-            Contact Us
-          </h2>
-          <p className="mb-6 text-white-700">
-            If you have any questions or concerns about these Terms and
-            Conditions, please contact us:
-          </p>
-          <p className="mb-6 text-white-700 text-center">
-            Email:{" "}
-            <a href="mailto:support@scrapquest.com" className="text-blue-600">
-              support@scrapquest.com
-            </a>
-            <br />
-            Phone:{" "}
-            <a href="tel:+123456789" className="text-blue-600">
-              +1 234 567 89
-            </a>
-          </p>
-        </section>
+  <h2 className="text-2xl font-semibold mb-4 text-center">Contact Us</h2>
+  <p className="mb-6 text-white-700">
+    If you have any questions or concerns about these Terms and Conditions, please contact us:
+  </p>
+  <div className="p-4 rounded shadow-lg text-center text-white transform transition-transform duration-300 hover:scale-105" style={{ background: 'linear-gradient(to right, rgba(11, 26, 32, 0.4), rgba(32, 58, 67, 0.4), rgba(11, 26, 32, 0.4))' }}>
+    <p className="mb-4">
+      Email:{" "}
+      <a href="mailto:support@scrapquest.com" className="text-blue-200 hover:text-blue-400 underline">
+        support@scrapquest.com
+      </a>
+    </p>
+    <p>
+      Phone:{" "}
+      <a href="tel:+123456789" className="text-blue-200 hover:text-blue-400 underline">
+        +1 234 567 89
+      </a>
+    </p>
+  </div>
+</section>
+
+
 
         <p className="mb-6 text-white-700 text-center">
           By using our website and services, you acknowledge that you have read,
