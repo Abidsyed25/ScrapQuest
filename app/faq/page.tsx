@@ -14,23 +14,18 @@ import Footer from '@/components/Footer';
 import "./faq.css";
 
 const FAQ: React.FC = () => {
-  
-  
   return (
     <>
-      <div className="relative faq-background">
+      <div className="relative bg-gradient-to-r from-[rgb(2,6,23)] via-[rgb(5,45,65)] to-[rgb(2,6,23)] text-white min-h-screen">
         <Nav />
-        <Link href="/" passHref>
-          <Image src={homeIcon} alt="Home" className="home-icon" width={50} height={50} />
-        </Link>
         <div className="container mx-auto p-6 max-w-[48rem]">
           <h1 className="text-4xl font-bold mb-6 faq-title">
             Frequently Asked{" "}
             <span>Questions</span>
           </h1>
           <div className="flex flex-col items-center justify-center">
-            <div style={{ width: "725px" }}>
-              <Accordion type="single" collapsible className="w-full">
+            <div style={{ width: "750px" }}>
+              <Accordion type="multiple" collapsible className="w-full">
                 {faqs.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="my-4">
                     <AccordionTrigger className="accordion-trigger">
